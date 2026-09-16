@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Dashboard — Raga House</title>
+<meta name="description" content="Book weekly lesson slots, track practice and progress, and manage your Raga House music lessons.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,460;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 110'%3E%3Cpath d='M10 82c20 10 38 4 50-6' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 62c7-11 4-22-6-30' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 46c7-2 12-9 9-16-7 2-12 9-9 16z' fill='%23B98A3A'/%3E%3Cpath d='M24 60c7-1 12-7 11-14-7 1-12 7-11 14z' fill='%23B98A3A'/%3E%3Cpath d='M22 54 L52 20 L52 20' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M52 20 L88 54' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 10 V70' stroke='%23172A46' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M88 10c16 7 22 19 15 32-4-11-11-18-15-20z' fill='%23172A46'/%3E%3Cellipse cx='80' cy='76' rx='13' ry='10' fill='%23172A46' transform='rotate(-20 80 76)'/%3E%3Crect x='38' y='44' width='8' height='8' fill='%23172A46'/%3E%3Crect x='50' y='44' width='8' height='8' fill='%23172A46'/%3E%3C/svg%3E">
+</head>
+<body class="dashboard-body">
+
+<div class="dash-app">
+
+  
+  <header class="dash-topbar">
+    <div class="topbar-left">
+      <button class="icon-btn sidebar-toggle" id="sidebar-toggle" aria-label="Open navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+      <a href="../home/index.html" class="brand dash-brand" aria-label="Raga House — back to home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 110" fill="none">
+            <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+            <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+            <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+            <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+            <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+            <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Raga<em>House</em></span>
+          <span class="brand-sub">Home Music Tuitions</span>
+        </span>
+      </a>
+    </div>
+
+    <div class="topbar-right">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="notif-wrap">
+        <button class="icon-btn notif-btn" id="notif-btn" aria-haspopup="true" aria-expanded="false" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 10a6 6 0 1112 0c0 3.4.8 5.4 1.7 6.6.3.4 0 1-.5 1H4.8c-.5 0-.8-.6-.5-1C5.2 15.4 6 13.4 6 10z" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 20a2 2 0 004 0" stroke-linecap="round"/></svg>
+          <span class="notif-badge" id="notif-badge">3</span>
+        </button>
+        <div class="notif-dropdown" id="notif-dropdown">
+          <div class="dropdown-head">
+            <h4>Notifications</h4>
+            <button class="text-link" id="mark-read">Mark all read</button>
+          </div>
+          <ul class="notif-list" id="notif-list">
+            <li class="notif-item unread">
+              <span class="notif-dot"></span>
+              <div><p>Sneha left a new practice note after Thursday's lesson.</p><span>2 hours ago</span></div>
+            </li>
+            <li class="notif-item unread">
+              <span class="notif-dot"></span>
+              <div><p>Your September fee of ₹2,400 is due on Sep 20.</p><span>Yesterday</span></div>
+            </li>
+            <li class="notif-item unread">
+              <span class="notif-dot"></span>
+              <div><p>A recording of your Für Elise lesson is ready to watch.</p><span>2 days ago</span></div>
+            </li>
+            <li class="notif-item">
+              <span class="notif-dot"></span>
+              <div><p>Your Thursday 6:00 PM slot with Sneha Rao is confirmed for next week.</p><span>4 days ago</span></div>
+            </li>
+          </ul>
+          <div class="dropdown-foot"><a href="#" id="view-all-notifs">View all activity</a></div>
+        </div>
+      </div>
+
+      <div class="profile-wrap">
+        <button class="profile-btn" id="profile-btn" aria-haspopup="true" aria-expanded="false">
+          <span class="avatar">IR</span>
+          <span class="profile-name">Ishaan Reddy</span>
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="profile-dropdown" id="profile-dropdown">
+          <div class="profile-dropdown-head">
+            <span class="avatar lg">IR</span>
+            <div><strong>Ishaan Reddy</strong><small>Piano · Weekly plan</small></div>
+          </div>
+          <button class="profile-link" data-target="profile">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+            View profile
+          </button>
+          <button class="profile-link" data-target="payments">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>
+            Manage payments
+          </button>
+          <button class="profile-link logout-link" id="profile-logout">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17l5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Log out
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="dash-body">
+
+    
+    <aside class="dash-sidebar" id="dash-sidebar">
+      <nav class="dash-nav" aria-label="Dashboard sections">
+        <button class="dash-nav-item active" data-target="overview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="7.5" height="7.5" rx="1.5"/><rect x="13" y="3.5" width="7.5" height="7.5" rx="1.5"/><rect x="3.5" y="13" width="7.5" height="7.5" rx="1.5"/><rect x="13" y="13" width="7.5" height="7.5" rx="1.5"/></svg>
+          <span>Overview</span>
+        </button>
+        <button class="dash-nav-item" data-target="book">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4" stroke-linecap="round"/><path d="M12 13v4M10 15h4" stroke-linecap="round"/></svg>
+          <span>Book a Lesson</span>
+        </button>
+        <button class="dash-nav-item" data-target="schedule">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4M7.5 13.5h.01M12 13.5h.01M16.5 13.5h.01M7.5 17h.01M12 17h.01" stroke-linecap="round"/></svg>
+          <span>My Schedule</span>
+        </button>
+        <button class="dash-nav-item" data-target="practice">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3.5 20V4M3.5 20h17" stroke-linecap="round"/><path d="M7 16l4-5 3 3 5-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Practice &amp; Progress</span>
+        </button>
+        <button class="dash-nav-item" data-target="recordings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>
+          <span>Recordings</span>
+        </button>
+        <button class="dash-nav-item" data-target="payments">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18M7 15h4" stroke-linecap="round"/></svg>
+          <span>Payments</span>
+        </button>
+        <button class="dash-nav-item" data-target="profile">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+          <span>Profile</span>
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="dash-nav-item logout-item" id="sidebar-logout">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 17l5-5-5-5M21 12H9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Log out</span>
+        </button>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+    
+    <main class="dash-main" id="dash-main">
+      <div class="dash-page-head">
+        <span class="eyebrow" id="page-eyebrow">Student Dashboard</span>
+        <h1 id="page-title">Overview</h1>
+        <p id="page-sub">Welcome back, Ishaan. Here's where things stand with your Piano lessons this week.</p>
+      </div>
+
+      
+      <section class="dash-panel active" data-panel="overview">
+        <div class="metrics-row">
+          <div class="card metric-card">
+            <div class="metric-lbl">Next lesson</div>
+            <div class="metric-num">Thu, 6:00 PM</div>
+            <div class="metric-sub">with <em>Sneha Rao</em></div>
+          </div>
+          <div class="card metric-card">
+            <div class="metric-lbl">Practice streak</div>
+            <div class="metric-num">12 days</div>
+            <div class="metric-sub">personal best is <em>19 days</em></div>
+          </div>
+          <div class="card metric-card">
+            <div class="metric-lbl">Assignments completed</div>
+            <div class="metric-num">78%</div>
+            <div class="metric-sub">this month</div>
+          </div>
+          <div class="card metric-card">
+            <div class="metric-lbl">Fee due</div>
+            <div class="metric-num">₹2,400</div>
+            <div class="metric-sub">due <em>Sep 20</em></div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div>
+            <div class="section-title-row"><h2>Upcoming session</h2><button class="link-btn" data-target="schedule">View schedule</button></div>
+            <div class="card card-pad upcoming-card">
+              <div class="upcoming-top">
+                <div>
+                  <span class="upcoming-instrument">Piano lesson</span>
+                  <div class="upcoming-when">Thursday, Sep 17 · 6:00 PM</div>
+                  <div class="upcoming-meta">Home visit · 2, Sundance Colony, Banjara Hills</div>
+                </div>
+                <span class="badge badge-gold">Confirmed</span>
+              </div>
+              <div class="upcoming-teacher">
+                <span class="avatar">SR</span>
+                <div><strong>Sneha Rao</strong><span>12 years teaching · ABRSM Grade 8, Piano</span></div>
+              </div>
+              <div class="upcoming-actions">
+                <button class="btn btn-outline btn-xs" data-target="schedule">Reschedule</button>
+                <button class="btn btn-outline btn-xs" data-target="recordings">Past recordings</button>
+              </div>
+            </div>
+
+            <div class="section-title-row" style="margin-top:28px;"><h2>This week's assignments</h2><button class="link-btn" data-target="practice">View all</button></div>
+            <div class="card">
+              <div class="mini-check-list" id="mini-check-list">
+                <div class="mini-check-item done" data-id="a1">
+                  <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="task-label">Practice C major scale, both hands — 10 minutes daily</span>
+                  <span class="task-due">Done</span>
+                </div>
+                <div class="mini-check-item" data-id="a2">
+                  <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="task-label">Learn bars 1–8 of Für Elise</span>
+                  <span class="task-due">Due Fri</span>
+                </div>
+                <div class="mini-check-item" data-id="a3">
+                  <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                  <span class="task-label">Clap and count the rhythm sheet Sneha left</span>
+                  <span class="task-due">Due Wed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="section-title-row"><h2>Latest practice note</h2><button class="link-btn" data-target="practice">All notes</button></div>
+            <div class="card card-pad">
+              <p class="note-quote">"Ishaan's left-hand timing is really settling in — keep the metronome on for the Für Elise bars this week and we'll try it without on Thursday."</p>
+              <div class="note-meta"><span class="avatar" style="width:26px;height:26px;font-size:10px;background:var(--gold);color:var(--ink-contrast);">SR</span> <strong>Sneha Rao</strong> · Sep 10</div>
+            </div>
+
+            <div class="section-title-row" style="margin-top:28px;"><h2>Fee status</h2><button class="link-btn" data-target="payments">Pay now</button></div>
+            <div class="card card-pad">
+              <div class="due-card paid" style="padding:0;background:none;border:none;">
+                <div>
+                  <div class="due-lbl">September — 4 weekly lessons</div>
+                  <div class="due-amt">₹2,400</div>
+                  <div class="due-sub">Due Sep 20 · UPI, card or bank transfer accepted</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="book">
+        <div class="filter-bar">
+          <div class="filter-field">
+            <label for="book-instrument">Instrument</label>
+            <select id="book-instrument">
+              <option>Piano</option>
+              <option>Guitar</option>
+              <option>Violin</option>
+              <option>Tabla</option>
+            </select>
+          </div>
+          <div class="filter-field">
+            <label for="book-instructor">Instructor</label>
+            <select id="book-instructor">
+              <option>Sneha Rao</option>
+              <option>Ananya Das</option>
+            </select>
+          </div>
+          <span class="filter-note">Showing slots for Banjara Hills · lessons repeat weekly once confirmed</span>
+        </div>
+
+        <div class="slot-table-wrap">
+          <table class="slot-table" id="slot-table">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="time-col">4:00 PM</td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+              </tr>
+              <tr>
+                <td class="time-col">5:00 PM</td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+                <td><button class="slot-btn">Open</button></td>
+              </tr>
+              <tr>
+                <td class="time-col">6:00 PM</td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn booked-you" data-mine="true"><span class="slot-name">Sneha Rao</span><span>Your slot</span></button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+              </tr>
+              <tr>
+                <td class="time-col">7:00 PM</td>
+                <td><button class="slot-btn unavailable" disabled>Booked</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+                <td><button class="slot-btn">Open</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card card-pad current-slot-card">
+          <div>
+            <div class="cs-label">Your current weekly slot</div>
+            <div class="cs-value" id="current-slot-value">Thursday · 6:00 PM · with Sneha Rao</div>
+          </div>
+          <span class="badge badge-gold" id="current-slot-badge">Confirmed</span>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="schedule">
+        <div class="tab-row">
+          <button class="tab-btn active" data-tab="upcoming">Upcoming</button>
+          <button class="tab-btn" data-tab="past">Past sessions</button>
+        </div>
+
+        <div class="session-list" id="schedule-upcoming">
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">17</div><div class="d-mon">Sep</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-gold">Confirmed</span>
+            <div class="session-actions">
+              <button class="btn btn-outline btn-xs">Reschedule</button>
+              <button class="btn btn-outline btn-xs">Cancel</button>
+            </div>
+          </div>
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">24</div><div class="d-mon">Sep</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-gold">Confirmed</span>
+            <div class="session-actions">
+              <button class="btn btn-outline btn-xs">Reschedule</button>
+              <button class="btn btn-outline btn-xs">Cancel</button>
+            </div>
+          </div>
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">1</div><div class="d-mon">Oct</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-muted">Pending confirmation</span>
+            <div class="session-actions">
+              <button class="btn btn-outline btn-xs">Reschedule</button>
+              <button class="btn btn-outline btn-xs">Cancel</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="session-list" id="schedule-past" style="display:none;">
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">10</div><div class="d-mon">Sep</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-success">Completed</span>
+            <div class="session-actions"><button class="btn btn-outline btn-xs" data-target="practice">View note</button></div>
+          </div>
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">3</div><div class="d-mon">Sep</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-success">Completed</span>
+            <div class="session-actions"><button class="btn btn-outline btn-xs" data-target="practice">View note</button></div>
+          </div>
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">27</div><div class="d-mon">Aug</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-success">Completed</span>
+            <div class="session-actions"><button class="btn btn-outline btn-xs" data-target="practice">View note</button></div>
+          </div>
+          <div class="card session-row">
+            <div class="session-date"><div class="d-num">20</div><div class="d-mon">Aug</div></div>
+            <div class="session-info"><strong>Piano with Sneha Rao</strong><span>6:00 PM · Home visit · Banjara Hills</span></div>
+            <span class="badge badge-rust">Missed</span>
+            <div class="session-actions"><button class="btn btn-outline btn-xs" data-target="practice">View note</button></div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="practice">
+        <div class="section-title-row"><h2>Skill progress</h2></div>
+        <div class="skills-grid">
+          <div class="skill-item"><div class="skill-top"><span>Technique</span><span>72%</span></div><div class="skill-track"><div class="skill-fill" style="width:72%"></div></div></div>
+          <div class="skill-item"><div class="skill-top"><span>Timing</span><span>65%</span></div><div class="skill-track"><div class="skill-fill" style="width:65%"></div></div></div>
+          <div class="skill-item"><div class="skill-top"><span>Sight-reading</span><span>58%</span></div><div class="skill-track"><div class="skill-fill" style="width:58%"></div></div></div>
+          <div class="skill-item"><div class="skill-top"><span>Repertoire</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
+        </div>
+
+        <div class="section-title-row"><h2>Practice assignments</h2><span class="badge badge-muted" id="assignment-count">2 of 3 done</span></div>
+        <div class="card" id="assignment-list" style="margin-bottom:34px;">
+          <div class="assignment-card done" data-id="p1">
+            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="assignment-body">
+              <strong>Practice C major scale, both hands</strong>
+              <p>10 minutes daily, hands separately then together. Focus on even finger pressure.</p>
+              <div class="assignment-foot"><span class="badge badge-success">Done</span></div>
+            </div>
+          </div>
+          <div class="assignment-card" data-id="p2">
+            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="assignment-body">
+              <strong>Learn bars 1–8 of Für Elise</strong>
+              <p>Right hand first, slow tempo with the metronome at 60 bpm before adding the left hand.</p>
+              <div class="assignment-foot"><span class="badge badge-muted">Due Friday</span></div>
+            </div>
+          </div>
+          <div class="assignment-card done" data-id="p3">
+            <span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M4 12l5 5 11-11" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div class="assignment-body">
+              <strong>Clap and count the rhythm sheet</strong>
+              <p>The dotted-quarter exercise Sneha handed out — clap it before playing it on the keys.</p>
+              <div class="assignment-foot"><span class="badge badge-success">Done</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-title-row"><h2>Progress notes</h2></div>
+        <div class="card card-pad">
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-rail"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+              <div class="timeline-content">
+                <span class="timeline-date">Sep 10</span>
+                <p class="timeline-quote">"Ishaan's left-hand timing is really settling in — keep the metronome on for the Für Elise bars this week and we'll try it without on Thursday."</p>
+                <div class="timeline-by"><strong>Sneha Rao</strong> · after lesson #14</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-rail"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+              <div class="timeline-content">
+                <span class="timeline-date">Sep 3</span>
+                <p class="timeline-quote">"Good progress on the C major scale. Wrist is still dropping on the thumb-under — a small cushion under the wrist during practice should help."</p>
+                <div class="timeline-by"><strong>Sneha Rao</strong> · after lesson #13</div>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-rail"><span class="timeline-dot"></span><span class="timeline-line"></span></div>
+              <div class="timeline-content">
+                <span class="timeline-date">Aug 27</span>
+                <p class="timeline-quote">"We started sight-reading with very simple four-bar phrases. Ten minutes of this before scales each day will pay off fast."</p>
+                <div class="timeline-by"><strong>Sneha Rao</strong> · after lesson #12</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="recordings">
+        <div class="recordings-grid">
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="Für Elise, bars 1–8" data-meta="Sep 10 · Sneha Rao · 42 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">42 min</span>
+            </div>
+            <div class="recording-body"><strong>Für Elise, bars 1–8</strong><span>Sep 10 · Sneha Rao</span></div>
+          </div>
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="C major scale technique" data-meta="Sep 3 · Sneha Rao · 38 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">38 min</span>
+            </div>
+            <div class="recording-body"><strong>C major scale technique</strong><span>Sep 3 · Sneha Rao</span></div>
+          </div>
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="Sight-reading basics" data-meta="Aug 27 · Sneha Rao · 40 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">40 min</span>
+            </div>
+            <div class="recording-body"><strong>Sight-reading basics</strong><span>Aug 27 · Sneha Rao</span></div>
+          </div>
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="Rhythm and counting" data-meta="Aug 13 · Sneha Rao · 35 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">35 min</span>
+            </div>
+            <div class="recording-body"><strong>Rhythm and counting</strong><span>Aug 13 · Sneha Rao</span></div>
+          </div>
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="Posture and hand position" data-meta="Aug 6 · Sneha Rao · 33 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">33 min</span>
+            </div>
+            <div class="recording-body"><strong>Posture and hand position</strong><span>Aug 6 · Sneha Rao</span></div>
+          </div>
+          <div class="card recording-card">
+            <div class="recording-thumb">
+              <button class="play-circle" data-title="First trial lesson" data-meta="Jul 30 · Sneha Rao · 30 min">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <span class="rec-duration">30 min</span>
+            </div>
+            <div class="recording-body"><strong>First trial lesson</strong><span>Jul 30 · Sneha Rao</span></div>
+          </div>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="payments">
+        <div class="due-card" id="due-card">
+          <div>
+            <div class="due-lbl">September — 4 weekly lessons</div>
+            <div class="due-amt" id="due-amt">₹2,400 due</div>
+            <div class="due-sub" id="due-sub">Due Sep 20 · pay by UPI, card or bank transfer</div>
+          </div>
+          <button class="btn btn-primary" id="pay-now-btn">Pay now</button>
+        </div>
+
+        <div class="section-title-row" style="margin-top:32px;"><h2>Saved payment method</h2></div>
+        <div class="card">
+          <div class="method-row">
+            <span class="method-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></span>
+            <div><strong>UPI — ishaan@okhdfcbank</strong><span>Default method for monthly fees</span></div>
+          </div>
+        </div>
+
+        <div class="section-title-row" style="margin-top:32px;"><h2>Payment history</h2></div>
+        <div class="card" style="overflow-x:auto;">
+          <table class="pay-table">
+            <thead><tr><th>Date</th><th>Description</th><th>Amount</th><th>Status</th><th>Receipt</th></tr></thead>
+            <tbody>
+              <tr><td>Aug 18, 2026</td><td>August — 4 weekly lessons</td><td>₹2,400</td><td><span class="badge badge-success">Paid</span></td><td><a href="#">Download</a></td></tr>
+              <tr><td>Jul 17, 2026</td><td>July — 4 weekly lessons</td><td>₹2,400</td><td><span class="badge badge-success">Paid</span></td><td><a href="#">Download</a></td></tr>
+              <tr><td>Jun 19, 2026</td><td>June — 4 weekly lessons</td><td>₹2,400</td><td><span class="badge badge-success">Paid</span></td><td><a href="#">Download</a></td></tr>
+              <tr><td>May 20, 2026</td><td>May — 5 weekly lessons</td><td>₹3,000</td><td><span class="badge badge-success">Paid</span></td><td><a href="#">Download</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      
+      <section class="dash-panel" data-panel="profile">
+        <div class="profile-grid">
+          <div class="card profile-summary">
+            <span class="avatar">IR</span>
+            <h3>Ishaan Reddy</h3>
+            <p>Piano student · joined Jul 2026</p>
+            <p style="margin-top:14px;">Assigned instructor</p>
+            <div class="upcoming-teacher" style="justify-content:center; border-top:none; padding-top:6px;">
+              <span class="avatar" style="background:var(--gold);color:var(--ink-contrast);">SR</span>
+              <div style="text-align:start;"><strong>Sneha Rao</strong><span>Piano</span></div>
+            </div>
+            <button class="btn btn-outline" id="edit-profile-btn">Edit profile</button>
+          </div>
+
+          <div>
+            <div class="card card-pad" style="margin-bottom:22px;">
+              <div class="section-title-row" style="margin-bottom:18px;"><h2>Student &amp; contact details</h2></div>
+              <form class="form-grid" id="profile-form">
+                <div class="form-row"><label for="pf-name">Student name</label><input id="pf-name" type="text" value="Ishaan Reddy" disabled></div>
+                <div class="form-row"><label for="pf-parent">Parent / guardian name</label><input id="pf-parent" type="text" value="Karthik Reddy" disabled></div>
+                <div class="form-row"><label for="pf-phone">Phone number</label><input id="pf-phone" type="tel" value="+91 90000 12345" disabled></div>
+                <div class="form-row"><label for="pf-email">Email</label><input id="pf-email" type="email" value="karthik.reddy@example.com" disabled></div>
+                <div class="form-row full"><label for="pf-address">Home address</label><input id="pf-address" type="text" value="2, Sundance Colony, Banjara Hills, Hyderabad" disabled></div>
+                <div class="form-row"><label for="pf-instrument">Instrument</label><select id="pf-instrument" disabled><option>Piano</option><option>Guitar</option><option>Violin</option><option>Tabla</option></select></div>
+                <div class="form-row"><label for="pf-plan">Lesson plan</label><select id="pf-plan" disabled><option>Weekly, one-on-one</option><option>Twice weekly, one-on-one</option></select></div>
+              </form>
+              <button class="btn btn-primary" id="save-profile-btn" style="display:none; margin-top:6px;">Save changes</button>
+            </div>
+
+            <div class="card card-pad">
+              <div class="section-title-row" style="margin-bottom:6px;"><h2>Notification preferences</h2></div>
+              <div class="toggle-row">
+                <div><strong>Lesson reminders</strong><span>Get a reminder 2 hours before each lesson</span></div>
+                <label class="switch"><input type="checkbox" checked><span class="track"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>WhatsApp updates</strong><span>Practice notes and recording links on WhatsApp</span></div>
+                <label class="switch"><input type="checkbox" checked><span class="track"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>Payment reminders</strong><span>Email 3 days before your fee is due</span></div>
+                <label class="switch"><input type="checkbox"><span class="track"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+
+<div class="modal-overlay" id="video-modal">
+  <div class="modal-box">
+    <button class="modal-close" id="video-modal-close" aria-label="Close">&times;</button>
+    <div class="modal-video-frame">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+    </div>
+    <h3 id="video-modal-title">Lesson recording</h3>
+    <p id="video-modal-meta"></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="../home/script.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+/* =======================================================================
+   RAGA HOUSE — Status pages (404 / Coming Soon)
+   Extends style.css tokens (Navy / Gold / Ivory, Fraunces / Work Sans)
+   ======================================================================= */
+
+body.status-body{ height: 100vh; overflow: hidden; background: var(--bg); position: relative; }
+
+
+.status-topbar{
+  position: fixed; top: 16px; right: 16px; z-index: 50;
+  display:flex; align-items:center; gap: 10px;
+}
+
+
+.status-shell{
+  height: 100vh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+  text-align:center; padding: 12px 24px; max-width: 620px; margin: 0 auto; position: relative; z-index: 2;
+  box-sizing: border-box;
+}
+
+.status-logo{ display:inline-flex; align-items:center; gap: 8px; margin-bottom: clamp(10px, 2.5vh, 24px); flex: none; }
+.status-logo .brand-mark{ width: 30px; height: 28px; }
+.status-logo .logo-word{ font-size: 16px; }
+
+
+.status-illustration{ width: clamp(110px, 18vh, 190px); margin: 0 auto clamp(8px, 2vh, 22px); position: relative; flex: none; }
+.status-illustration svg{ width:100%; height:auto; }
+
+
+.status-ghost{
+  position:absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index:-1;
+  font-family:'Fraunces', serif; font-size: clamp(90px, 16vh, 180px); font-weight: 600; color: var(--gold-soft);
+  opacity: .55; white-space: nowrap; line-height:1; pointer-events:none;
+}
+html[data-theme="dark"] .status-ghost{ opacity: .28; }
+
+.status-badge{
+  display:inline-flex; align-items:center; gap: 7px; font-size: 12px; font-weight: 600; letter-spacing: .04em;
+  padding: 6px 14px; border-radius: 999px; background: var(--gold-soft); color: #5B4318; margin-bottom: clamp(8px, 2vh, 18px); flex:none;
+}
+html[data-theme="dark"] .status-badge{ color: #2A1F0B; }
+.status-badge .dot{ width: 7px; height:7px; border-radius:50%; background: var(--gold); }
+
+.status-shell h1{ font-size: clamp(20px, 3.4vh, 32px); font-weight: 480; line-height: 1.25; flex: none; }
+.status-shell p.status-sub{ margin-top: clamp(6px, 1.4vh, 14px); font-size: clamp(12.5px, 1.9vh, 15px); color: var(--text-soft); line-height: 1.6; max-width: 460px; flex: none; }
+
+.status-actions{ display:flex; gap: 12px; flex-wrap: wrap; justify-content:center; margin-top: clamp(14px, 2.6vh, 28px); flex: none; }
+
+.status-links{ display:flex; gap: 20px; flex-wrap:wrap; justify-content:center; margin-top: clamp(14px, 2.6vh, 30px); padding-top: clamp(12px, 2vh, 22px); border-top: 1px solid var(--border); width: 100%; flex: none; }
+.status-links a{ font-size: 12.5px; color: var(--text-soft); }
+.status-links a:hover{ color: var(--gold); }
+
+
+.notify-form{ display:flex; gap: 10px; margin-top: clamp(14px, 2.6vh, 26px); width: 100%; max-width: 400px; flex-wrap: wrap; justify-content:center; flex: none; }
+.notify-form input{
+  flex: 1 1 220px; padding: 12px 16px; border-radius: 2px; border: 1px solid var(--border);
+  background: var(--surface); font-size: 14px; font-family: inherit; color: var(--text);
+}
+.notify-form input:focus{ border-color: var(--gold); }
+.notify-form button{ flex: 0 0 auto; }
+
+
+.build-meter{ display:flex; align-items:center; gap: 10px; margin-top: clamp(12px, 2.4vh, 26px); width: 100%; max-width: 320px; flex: none; }
+.build-track{ flex:1; height: 6px; border-radius: 999px; background: var(--border); overflow:hidden; }
+.build-fill{ height:100%; width: 64%; border-radius: 999px; background: var(--gold); }
+.build-meter span{ font-size: 12px; color: var(--text-soft); flex:none; }
+
+
+.metronome-arm{ transform-origin: 100px 150px; animation: tick 1.6s ease-in-out infinite alternate; }
+@keyframes tick{ from{ transform: rotate(-16deg); } to{ transform: rotate(16deg); } }
+
+
+.toast{
+  position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--ink); color: var(--ink-contrast); padding: 13px 22px; border-radius: var(--radius);
+  font-size: 13.5px; box-shadow: var(--shadow-lg); opacity:0; pointer-events:none;
+  transition: opacity .2s ease, transform .2s ease; z-index: 200;
+}
+.toast.show{ opacity:1; transform: translateX(-50%) translateY(0); }
+
+
+@media (max-width: 480px){
+  .status-topbar{ top: 12px; right: 12px; }
+  .status-actions{ flex-direction:column; width:100%; max-width: 280px; }
+  .status-actions .btn{ width:100%; }
+  .notify-form{ flex-direction:column; }
+  .notify-form button{ width:100%; }
+  .status-links{ gap: 12px 16px; }
+}
+@media (max-height: 620px){
+  .status-logo, .status-illustration, .status-badge{ margin-bottom: 6px; }
+  .status-shell p.status-sub{ display: -webkit-box;  -webkit-box-orient: vertical; overflow: hidden; }
+  .build-meter{ display:none; }
+}

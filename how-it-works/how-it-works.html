@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How It Works — Raga House</title>
+<meta name="description" content="See exactly how Raga House works, from your first enquiry to weekly home music lessons — matching, trial class, scheduling and ongoing progress tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,460;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="howitworks.css">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 110'%3E%3Cpath d='M10 82c20 10 38 4 50-6' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 62c7-11 4-22-6-30' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 46c7-2 12-9 9-16-7 2-12 9-9 16z' fill='%23B98A3A'/%3E%3Cpath d='M24 60c7-1 12-7 11-14-7 1-12 7-11 14z' fill='%23B98A3A'/%3E%3Cpath d='M22 54 L52 20 L52 20' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M52 20 L88 54' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 10 V70' stroke='%23172A46' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M88 10c16 7 22 19 15 32-4-11-11-18-15-20z' fill='%23172A46'/%3E%3Cellipse cx='80' cy='76' rx='13' ry='10' fill='%23172A46' transform='rotate(-20 80 76)'/%3E%3Crect x='38' y='44' width='8' height='8' fill='%23172A46'/%3E%3Crect x='50' y='44' width='8' height='8' fill='%23172A46'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="../home/index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 110" fill="none">
+          <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+          <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+          <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+          <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+          <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="logo-word">Raga<em>House</em></span><br>
+        <span class="brand-sub">Home Music Tuitions</span>
+      </span>
+    </a>
+
+    <nav class="primary">
+      <div class="nav-item">
+        <a href="../home/index.html">Home
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="../home/index.html" aria-current="page">Home 1</a>
+          <a href="../home2/home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a href="../instruments/instruments.html">Instruments</a>
+      <a href="../how-it-works/how-it-works.html" class="active">How It Works</a>
+      <a href="../pricing/pricing.html">Pricing</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="../signup/signup.html" class="btn btn-primary btn-sm desktop-only">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+        <span class="btn-label">Sign Up</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel">
+    <details class="mobile-dropdown">
+      <summary>Home</summary>
+      <a href="../home/index.html">Home 1</a>
+      <a href="../home2/home-2.html">Home 2</a>
+    </details>
+    
+    <a href="../instruments/instruments.html">Instruments</a>
+    <a href="../how-it-works/how-it-works.html">How It Works</a>
+    <a href="../pricing/pricing.html">Pricing</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../signup/signup.html" class="btn btn-primary btn-sm mobile-signup-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+      <span class="btn-label">Sign Up</span>
+    </a>
+  </div>
+</header>
+
+
+<section class="hero hero-page" id="top">
+  <div class="hero-frame">
+    <img src="images/how-it-works-hero.jpg" alt="Teacher and student during a home music lesson">
+    <div class="hero-copy">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="../home/index.html">Home</a>
+          <span>/</span>
+          <span class="current">How It Works</span>
+        </div>
+        <p class="eyebrow-note"><span class="dot"></span>From first enquiry to first lesson</p>
+        <h1>How Raga House <em>works</em></h1>
+        <p class="lead">A simple, transparent process — tell us what you need, meet a matched teacher for a free trial, then settle into weekly lessons at home with clear notes on progress after every visit.</p>
+        <div class="hero-ctas">
+          <a href="../contact/contact.html" class="btn btn-ghost">Book a free trial class</a>
+          <a href="#process" class="link-under">See the five steps
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-bottom:64px;">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div class="overview-item">
+        <span class="ov-num">01</span>
+        <h3>You tell us what you need</h3>
+        <p>Instrument, age of the student, and a rough idea of your weekly schedule — that's all it takes to get started.</p>
+      </div>
+      <div class="overview-item">
+        <span class="ov-num">02</span>
+        <h3>We match a teacher</h3>
+        <p>Based on instrument, experience level and your locality, we assign a vetted teacher suited to the student.</p>
+      </div>
+      <div class="overview-item">
+        <span class="ov-num">03</span>
+        <h3>Lessons begin at home</h3>
+        <p>Starting with a free trial class, then weekly sessions at a time that fits your family's routine.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="process" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The full process</span>
+      <h2>Five steps to your first lesson</h2>
+      <p>Most families go from enquiry to their first trial class within three to five days. Here's exactly what happens at each stage.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="images/step-enquiry.jpg" alt="Parent filling a trial class request form">
+          <span class="step-number">1</span>
+        </div>
+        <div class="step-body">
+          <h3>Share your details</h3>
+          <p>Fill the short trial form or call us with the student's age, the instrument they want to learn, and your locality in Hyderabad. Takes under two minutes.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="images/step-matching.jpg" alt="Coordinator matching a teacher to a student profile">
+          <span class="step-number">2</span>
+        </div>
+        <div class="step-body">
+          <h3>Get matched with a teacher</h3>
+          <p>We shortlist a teacher based on instrument, age group, teaching style and distance from your home, then call to confirm a convenient day and time.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="images/step-trial.jpg" alt="Free trial music lesson at a student's home">
+          <span class="step-number">3</span>
+        </div>
+        <div class="step-body">
+          <h3>Attend a free trial class</h3>
+          <p>The teacher visits at the scheduled time with any equipment needed for the trial, gets a feel for the student's level, and answers any questions you have.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="steps-grid-secondary">
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="images/step-weekly.jpg" alt="Weekly recurring home music lesson">
+          <span class="step-number">4</span>
+        </div>
+        <div class="step-body">
+          <h3>Settle into weekly lessons</h3>
+          <p>Happy with the trial? Pick a plan and lock in a weekly slot. The same teacher returns each week, building continuity instead of starting over each time.</p>
+        </div>
+      </div>
+
+      <div class="step-card">
+        <div class="step-photo">
+          <img src="images/step-progress.jpg" alt="Practice notes and progress tracking notebook">
+          <span class="step-number">5</span>
+        </div>
+        <div class="step-body">
+          <h3>Track progress every week</h3>
+          <p>After each session, the teacher leaves a short practice note covering what was learned, what to practice before the next visit, and what's coming up next.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="difference-section">
+  <div class="wrap">
+    <div class="difference-grid">
+
+      <div class="difference-image">
+        <img src="images/first-lesson.jpg" alt="Teacher greeting a student for the first home lesson">
+        <div class="difference-image-caption">
+          <span>Your first visit.</span>
+          <small>NO PRESSURE, JUST MUSIC.</small>
+        </div>
+      </div>
+
+      <div class="difference-content">
+        <span class="eyebrow">What to expect</span>
+        <h2>Your first trial <em>lesson, explained.</em></h2>
+        <p class="difference-intro">
+          There's no obligation and nothing to prepare. The teacher arrives with everything
+          needed for the trial and spends the full session getting to know the student.
+        </p>
+        <p class="difference-text">
+          Expect a short conversation about musical interests and goals, a simple assessment
+          of current ability (even if that's none at all), and a first taste of actually
+          playing. By the end, you'll have a clear sense of the teacher's style and a
+          recommended starting point for regular lessons.
+        </p>
+
+        <div class="difference-points">
+          <div class="difference-point">
+            <span class="difference-number">01</span>
+            <div>
+              <h3>Around 45 minutes</h3>
+              <p>Enough time to assess level and play together, without overwhelming a first-timer.</p>
+            </div>
+          </div>
+          <div class="difference-point">
+            <span class="difference-number">02</span>
+            <div>
+              <h3>Nothing to buy first</h3>
+              <p>Trial classes for violin and tabla include a spare instrument, so you can decide before purchasing anything.</p>
+            </div>
+          </div>
+          <div class="difference-point">
+            <span class="difference-number">03</span>
+            <div>
+              <h3>Honest feedback</h3>
+              <p>The teacher shares what they'd focus on first — so you know exactly what regular lessons would look like.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section story-section">
+  <div class="wrap">
+    <div class="story-grid">
+
+      <div class="story-content">
+        <span class="eyebrow">Scheduling</span>
+        <h2>Lessons that flex <em>around your week.</em></h2>
+        <p class="story-intro">
+          Life in Hyderabad rarely runs on a fixed clock — exams, travel and long workdays all
+          get in the way. Our scheduling is built to bend around that, not fight it.
+        </p>
+        <p class="story-text">
+          Pick a recurring weekly slot that suits your household, and the same teacher keeps
+          returning at that time. Need to shift a lesson because of a school event or a family
+          trip? Message your coordinator at least 24 hours ahead and we'll reschedule within
+          the same week wherever possible, at no extra cost. If a teacher is ever unavailable
+          due to illness or travel, we arrange a qualified substitute rather than simply
+          cancelling the week, so momentum is never lost.
+        </p>
+      </div>
+
+      <div class="story-image">
+        <img src="images/scheduling.jpg" alt="Calendar and weekly lesson planner on a table">
+        <div class="story-image-caption">
+          <span>Same teacher, same time.</span>
+          <small>EVERY WEEK.</small>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="section trust-section" id="trust">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Behind every teacher</span>
+      <h2>Why parents trust the process</h2>
+      <p>Every step before a teacher ever reaches your door is designed around one thing: your family's comfort and safety.</p>
+    </div>
+  </div>
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <h3>Background-checked</h3>
+      <p>Every teacher goes through identity verification and a background check before joining the roster.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l7 3.5v5c0 4.5-3 7.5-7 9.5-4-2-7-5-7-9.5v-5z"/></svg>
+      </div>
+      <h3>Auditioned &amp; trained</h3>
+      <p>Teachers are auditioned on musical ability and teaching manner, then briefed on our home-lesson standards.</p>
+    </div>
+    <div class="trust-card">
+      <div class="trust-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 008 8M4 12l3-2m13 2l-3-2"/></svg>
+      </div>
+      <h3>Replacement guarantee</h3>
+      <p>Not the right fit after the trial? We match you with a different teacher at no extra cost, no questions asked.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Common questions</span>
+      <h2>Frequently asked questions</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Is the trial class really free?</summary>
+        <p>Yes. The first trial lesson is completely free, with no obligation to continue. You only choose a paid weekly plan if you and the student are happy after the trial.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to own an instrument before starting?</summary>
+        <p>Not for the trial. For violin and tabla, teachers bring a spare instrument to the trial class. For guitar and piano, we'll guide you on an affordable starter instrument once you decide to continue.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I change my weekly lesson time later?</summary>
+        <p>Yes. Give your coordinator at least 24 hours' notice and we'll shift that week's lesson, or help you move to a new permanent weekly slot if your routine changes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens if the teacher can't make it one week?</summary>
+        <p>We arrange a qualified substitute teacher wherever possible so the lesson still happens. If that isn't possible, the session is rescheduled within the same week at no extra cost.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Which areas of Hyderabad do you cover?</summary>
+        <p>We currently teach in over 30 localities across Hyderabad, including Banjara Hills, Jubilee Hills, Gachibowli and Kondapur. Share your locality on the trial form and we'll confirm coverage.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I track what my child is learning?</summary>
+        <p>After every lesson, the teacher leaves a short written practice note — what was covered, what to practice before the next visit, and what's coming up next. No app or login needed.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-banner">
+  <div class="bg-photo"><img src="images/cta-banner.jpg" alt="Student playing an instrument at home"></div>
+  <div class="wrap">
+    <div class="cta-banner-inner">
+      <span class="eyebrow">Ready to begin?</span>
+      <h2>Start with a <em>free trial class</em> this week</h2>
+      <p>Tell us the instrument and your locality, and we'll match a teacher and schedule your first visit within a few days.</p>
+      <a href="../contact/contact.html" class="btn btn-primary">Book your free trial</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="../home/index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 110" fill="none">
+            <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+            <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+            <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+            <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+            <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+            <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Raga<em>House</em></span><br>
+          <span class="brand-sub">Home Music Tuitions</span>
+        </span>
+      </a>
+      <p class="footer-desc" style="margin-top:18px;">In-home lessons for guitar, piano, violin and tabla, taught by vetted teachers on a schedule built around your family.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../home2/home-2.html">Home 2</a></li>
+        <li><a href="../instruments/instruments.html">Instruments</a></li>
+        <li><a href="../how-it-works/how-it-works.html">How It Works</a></li>
+        <li><a href="../pricing/pricing.html">Pricing</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Additional Pages</h4>
+      <ul>
+        <li><a href="../additional/404.html">404 Page</a></li>
+        <li><a href="../additional/coming-soon.html">Coming Soon</a></li>
+        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+          +91 90000 00000
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          hello@ragahouse.in
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Hyderabad, Telangana
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 Raga House. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="../legal/terms.html">Terms</a>
+      <a href="../legal/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script src="../home/script.js"></script>
+</body>
+</html>

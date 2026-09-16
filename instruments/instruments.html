@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instruments — Raga House</title>
+<meta name="description" content="Guitar, piano, violin and tabla lessons at home in Hyderabad — compare instruments and find the right first pick for your child.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,460;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="instruments.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 110'%3E%3Cpath d='M10 82c20 10 38 4 50-6' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 62c7-11 4-22-6-30' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 46c7-2 12-9 9-16-7 2-12 9-9 16z' fill='%23B98A3A'/%3E%3Cpath d='M24 60c7-1 12-7 11-14-7 1-12 7-11 14z' fill='%23B98A3A'/%3E%3Cpath d='M22 54 L52 20 L52 20' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M52 20 L88 54' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 10 V70' stroke='%23172A46' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M88 10c16 7 22 19 15 32-4-11-11-18-15-20z' fill='%23172A46'/%3E%3Cellipse cx='80' cy='76' rx='13' ry='10' fill='%23172A46' transform='rotate(-20 80 76)'/%3E%3Crect x='38' y='44' width='8' height='8' fill='%23172A46'/%3E%3Crect x='50' y='44' width='8' height='8' fill='%23172A46'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="../home/index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 110" fill="none">
+          <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+          <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+          <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+          <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+          <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="logo-word">Raga<em>House</em></span><br>
+        <span class="brand-sub">Home Music Tuitions</span>
+      </span>
+    </a>
+
+    <nav class="primary">
+      <div class="nav-item">
+        <a href="../home/index.html">Home
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="../home/index.html">Home 1</a>
+          <a href="../home2/home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a href="../instruments/instruments.html" class="active" aria-current="page">Instruments</a>
+      <a href="../how-it-works/how-it-works.html">How It Works</a>
+      <a href="../pricing/pricing.html">Pricing</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="../signup/signup.html" class="btn btn-primary btn-sm desktop-only">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+        <span class="btn-label">Sign Up</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel">
+    <details class="mobile-dropdown">
+      <summary>Home</summary>
+      <a href="../home/index.html">Home 1</a>
+      <a href="../home2/home-2.html">Home 2</a>
+    </details>
+    <a href="../about/about.html">About Us</a>
+    <a href="../instruments/instruments.html">Instruments</a>
+    <a href="../how-it-works/how-it-works.html">How It Works</a>
+    <a href="../pricing/pricing.html">Pricing</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../signup/signup.html" class="btn btn-primary btn-sm mobile-signup-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+      <span class="btn-label">Sign Up</span>
+    </a>
+  </div>
+</header>
+
+
+<section class="page-hero">
+  <div class="wrap page-hero-grid">
+    <div class="page-hero-inner">
+      <p class="eyebrow-note"><span class="dot"></span>Four instruments, one teacher at your door</p>
+      <h1>Find the right instrument <em>to start with</em></h1>
+      <p class="lead">Guitar, piano, violin or tabla — every lesson is one-on-one, at your home, with a teacher matched to your child's age and level. Browse each instrument below, compare them side by side, or head to the full instrument &amp; pricing guide to get started.</p>
+      <div class="hero-chips">
+        <a href="#guitar" class="hero-chip">Guitar</a>
+        <a href="#piano" class="hero-chip">Piano</a>
+        <a href="#violin" class="hero-chip">Violin</a>
+        <a href="#tabla" class="hero-chip">Tabla</a>
+      </div>
+      <div class="hero-ctas" style="margin-top:30px;">
+        <a href="instrument-detail.html" class="btn btn-ghost">See instrument details &amp; pricing</a>
+        <a href="#compare" class="link-under">Compare instruments
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-photo-grid">
+      <a href="#guitar" class="hero-photo hero-photo-1"><img src="images/raga-guitar.jpg" alt="Child learning guitar at home"></a>
+      <a href="#piano" class="hero-photo hero-photo-2"><img src="images/raga-piano.jpg" alt="Piano lesson at home"></a>
+      <a href="#violin" class="hero-photo hero-photo-3"><img src="images/raga-violin.jpg" alt="Violin lesson at home"></a>
+      <a href="#tabla" class="hero-photo hero-photo-4"><img src="images/raga-tabla.jpg" alt="Tabla lesson at home"></a>
+      <div class="hero-photo-badge">
+        <span class="badge-dot">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span>
+          <strong>1-on-1, at home</strong>
+          <span>No group classes, no commute</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-hero-stats-wrap wrap">
+    <div class="page-hero-stats">
+      <div class="stat"><div class="num">4</div><div class="lbl">instruments taught at home</div></div>
+      <div class="stat"><div class="num">5+</div><div class="lbl">youngest starting age (piano)</div></div>
+      <div class="stat"><div class="num">9 yrs</div><div class="lbl">average teacher experience</div></div>
+      <div class="stat"><div class="num">1</div><div class="lbl">free first lesson, no obligation</div></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Every instrument, every lesson</span>
+      <h2>What's included, no matter which you pick</h2>
+      <p>The instrument changes the sound — the way we teach it doesn't. Every plan at Raga House includes the same four things.</p>
+    </div>
+    <div class="included-grid">
+      <div class="included-card">
+        <span class="included-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4"/></svg>
+        </span>
+        <h3>Teacher comes to you</h3>
+        <p>No commute, no traffic — your teacher arrives at your home each week, with a spare instrument for the first lesson where needed.</p>
+      </div>
+      <div class="included-card">
+        <span class="included-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Matched to your child</h3>
+        <p>We pair every student with a teacher suited to their age, level and the tradition — Carnatic or Western — they want to learn.</p>
+      </div>
+      <div class="included-card">
+        <span class="included-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17M8 3v3M16 3v3" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Flexible weekly scheduling</h3>
+        <p>Lessons are booked around your family's routine, and can be rescheduled with notice when exams or travel get in the way.</p>
+      </div>
+      <div class="included-card">
+        <span class="included-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M9 15l3-4 3 3 4-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>A practice note every visit</h3>
+        <p>Your teacher leaves a short, clear note after each lesson — what to practice, how long, and what's next — so progress is easy to track.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-top:70px;">
+  <div class="wrap">
+    <div class="inst-detail-grid">
+
+      
+      <div class="inst-detail" id="guitar">
+        <div class="inst-detail-photo">
+          <img src="images/tutor-guitar.jpg" alt="Acoustic guitar lesson at home">
+          <span class="inst-tag">Ages 7+</span>
+        </div>
+        <div class="inst-detail-body">
+          <span class="popular-tag">Most-picked first instrument</span>
+          <h3>Guitar</h3>
+          <p class="inst-detail-desc">Acoustic or electric, from a student's very first chord to playing full songs. Lessons move at a pace that keeps beginners motivated without skipping the fundamentals.</p>
+          <ul class="inst-detail-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Teacher brings a travel guitar for the first lesson</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Sheet music, tabs, and chord charts included</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Electric guitar available for teens on request</li>
+          </ul>
+          <p class="inst-detail-fit"><strong>Good fit for:</strong> kids who already hum along to songs, and teens who eventually want to jam or join a band.</p>
+          <a href="instrument-detail.html#guitar" class="btn btn-primary">See guitar details &amp; pricing</a>
+        </div>
+      </div>
+
+      
+      <div class="inst-detail reverse" id="piano">
+        <div class="inst-detail-photo">
+          <img src="images/tutor-piano.jpg" alt="Piano keys during a home lesson">
+          <span class="inst-tag">Ages 5+</span>
+        </div>
+        <div class="inst-detail-body">
+          <span class="popular-tag">Youngest starting age</span>
+          <h3>Piano</h3>
+          <p class="inst-detail-desc">Classical technique built on your own keyboard or upright, with a syllabus that can follow ABRSM grading if a student wants to sit exams later on.</p>
+          <ul class="inst-detail-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Works with any 61-key keyboard or upright piano</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Finger technique, sight-reading and theory basics</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Optional ABRSM exam-prep track from Grade 1</li>
+          </ul>
+          <p class="inst-detail-fit"><strong>Good fit for:</strong> younger children starting their first instrument, and families with a keyboard or piano already at home.</p>
+          <a href="instrument-detail.html#piano" class="btn btn-primary">See piano details &amp; pricing</a>
+        </div>
+      </div>
+
+      
+      <div class="inst-detail" id="violin">
+        <div class="inst-detail-photo">
+          <img src="images/tutor-violin.jpg" alt="Violin and bow, home lesson setup">
+          <span class="inst-tag">Ages 6+</span>
+        </div>
+        <div class="inst-detail-body">
+          <h3>Violin</h3>
+          <p class="inst-detail-desc">Posture, bowing and ear training from the very first lesson, taught in either the Carnatic or Western classical tradition — or a blend of both once the fundamentals are solid.</p>
+          <ul class="inst-detail-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Teacher brings a spare violin for the first lesson</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Choice of Carnatic or Western classical technique</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Ear-training drills built into every lesson</li>
+          </ul>
+          <p class="inst-detail-fit"><strong>Good fit for:</strong> families drawn to Carnatic music, and kids who show a good ear for pitch early on.</p>
+          <a href="instrument-detail.html#violin" class="btn btn-primary">See violin details &amp; pricing</a>
+        </div>
+      </div>
+
+      
+      <div class="inst-detail reverse" id="tabla">
+        <div class="inst-detail-photo">
+          <img src="images/tutor-tabla.jpg" alt="Tabla drums, home lesson setup">
+          <span class="inst-tag">Ages 6+</span>
+        </div>
+        <div class="inst-detail-body">
+          <span class="popular-tag">Easiest to pick up young</span>
+          <h3>Tabla</h3>
+          <p class="inst-detail-desc">Rhythm and taal built through call-and-response drills that make timing feel like play — often the easiest instrument for a young child to take to straight away.</p>
+          <ul class="inst-detail-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Teacher brings a spare tabla set for the first lesson</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Taal counting and call-and-response rhythm drills</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Purchasing your own tabla set is optional at first</li>
+          </ul>
+          <p class="inst-detail-fit"><strong>Good fit for:</strong> energetic kids, and as a natural first instrument for very young learners.</p>
+          <a href="instrument-detail.html#tabla" class="btn btn-primary">See tabla details &amp; pricing</a>
+        </div>
+      </div>
+
+    </div>
+
+    
+    <div class="cta-banner" style="margin-top:64px;">
+      <div class="cta-banner-copy">
+        <span class="eyebrow">Still deciding</span>
+        <h2>Not sure which one is right for your child?</h2>
+        <p>Tell us their age and what kind of music they love, and we'll suggest an instrument and teacher — then get them started with a free, no-obligation first lesson.</p>
+      </div>
+      <div class="cta-banner-actions">
+        <a href="instrument-detail.html" class="btn btn-ghost">See instrument details &amp; pricing</a>
+        <a href="../contact/contact.html" class="link-under">Talk to us first
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="compare" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Still deciding</span>
+      <h2>Compare the four instruments</h2>
+      <p>A quick side-by-side if you're choosing between two or more for the same child.</p>
+    </div>
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Guitar</th>
+            <th scope="col">Piano</th>
+            <th scope="col">Violin</th>
+            <th scope="col">Tabla</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Typical start age</th>
+            <td>7+</td>
+            <td>5+</td>
+            <td>6+</td>
+            <td>6+</td>
+          </tr>
+          <tr>
+            <th scope="row">Own instrument needed</th>
+            <td>Recommended by week 3</td>
+            <td>Keyboard or upright</td>
+            <td>Optional at first</td>
+            <td>Optional at first</td>
+          </tr>
+          <tr>
+            <th scope="row">Space at home</th>
+            <td>A small corner</td>
+            <td>A wall or table</td>
+            <td>Minimal</td>
+            <td>Floor space</td>
+          </tr>
+          <tr>
+            <th scope="row">Early practice difficulty</th>
+            <td>Moderate</td>
+            <td>Easy–moderate</td>
+            <td>Moderate–challenging</td>
+            <td>Easy</td>
+          </tr>
+          <tr>
+            <th scope="row">Popular with</th>
+            <td>Teens &amp; future bands</td>
+            <td>Younger children</td>
+            <td>Carnatic families</td>
+            <td>First-time young learners</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Instruments, answered</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Which instrument should my child start with?</summary>
+        <p>For younger children, piano or tabla tend to be the easiest starting points since they don't require exact pitch control right away. Guitar and violin work well from around age 7, especially if a child already shows interest in a specific sound.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do we need to own the instrument before starting?</summary>
+        <p>No — for the first lesson, your teacher brings a spare instrument (guitar, violin or tabla). For piano, you'll need access to a keyboard or upright at home. We'll recommend when and what to buy once your child has settled in.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can a student switch instruments later?</summary>
+        <p>Yes, anytime. Many students try one instrument for a term and switch — your plan carries over, and we simply match you with a teacher for the new instrument.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is the first lesson different from a regular lesson?</summary>
+        <p>Not really — it's a genuine first lesson, not a sales demo. The teacher assesses your child's starting point and gets them playing something within the hour.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can two instruments be taught in the same household?</summary>
+        <p>Yes. Siblings can each learn a different instrument, or one student can add a second instrument to their plan — see the Pricing page for add-on rates.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="section trial-section" id="get-started">
+  <div class="wrap">
+    <div class="trial-card">
+      <div class="trial-card-photo">
+        <img src="images/raga-trial-cinematic.jpg" alt="Close-up of hands on a piano keyboard">
+        <div class="trial-card-quote">
+          <p>"The teacher figured out my daughter loves film songs in the first ten minutes — she's been hooked ever since."</p>
+          <cite>— Parent, Jubilee Hills</cite>
+        </div>
+      </div>
+
+      <div class="trial-card-form">
+        <span class="eyebrow">Ready when you are</span>
+        <h2>Book your first lesson</h2>
+        <p>Leave a few details and a teacher will call you within a day to schedule your first visit — no payment needed for the first lesson.</p>
+
+        <form class="trial-form">
+          <div class="form-row">
+            <label for="name">Parent or student name</label>
+            <input id="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-two">
+            <div class="form-row">
+              <label for="phone">Phone number</label>
+              <input id="phone" type="tel" placeholder="10-digit number" required>
+            </div>
+            <div class="form-row">
+              <label for="age">Student's age</label>
+              <input id="age" type="number" min="3" max="99" placeholder="e.g. 9">
+            </div>
+          </div>
+          <div class="form-two">
+            <div class="form-row">
+              <label for="instrument">Instrument</label>
+              <select id="instrument">
+                <option>Guitar</option>
+                <option>Piano</option>
+                <option>Violin</option>
+                <option>Tabla</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="area">Locality in Hyderabad</label>
+              <input id="area" type="text" placeholder="e.g. Banjara Hills">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Request my first lesson</button>
+          <p class="form-fine">We'll call within one business day to confirm a time.</p>
+        </form>
+
+        <div class="trial-trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>No payment for first lesson</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Vetted teachers only</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Reschedule anytime</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="../home/index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 110" fill="none">
+            <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+            <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+            <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+            <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+            <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+            <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Raga<em>House</em></span><br>
+          <span class="brand-sub">Home Music Tuitions</span>
+        </span>
+      </a>
+      <p class="footer-desc" style="margin-top:18px;">In-home lessons for guitar, piano, violin and tabla, taught by vetted teachers on a schedule built around your family.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../instruments/instruments.html">Instruments</a></li>
+        <li><a href="../how-it-works/how-it-works.html">How It Works</a></li>
+        <li><a href="../pricing/pricing.html">Pricing</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Terms of service</a></li>
+        <li><a href="#">Privacy policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+          +91 90000 00000
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          hello@ragahouse.in
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Hyderabad, Telangana
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 Raga House. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../home/script.js"></script>
+</body>
+</html>

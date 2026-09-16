@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing — Raga House</title>
+<meta name="description" content="Simple, transparent pricing for weekly guitar, piano, violin and tabla lessons at home in Hyderabad. No enrolment fee, cancel anytime.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,460;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pricing.css">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 110'%3E%3Cpath d='M10 82c20 10 38 4 50-6' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 62c7-11 4-22-6-30' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 46c7-2 12-9 9-16-7 2-12 9-9 16z' fill='%23B98A3A'/%3E%3Cpath d='M24 60c7-1 12-7 11-14-7 1-12 7-11 14z' fill='%23B98A3A'/%3E%3Cpath d='M22 54 L52 20 L52 20' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M52 20 L88 54' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 10 V70' stroke='%23172A46' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M88 10c16 7 22 19 15 32-4-11-11-18-15-20z' fill='%23172A46'/%3E%3Cellipse cx='80' cy='76' rx='13' ry='10' fill='%23172A46' transform='rotate(-20 80 76)'/%3E%3Crect x='38' y='44' width='8' height='8' fill='%23172A46'/%3E%3Crect x='50' y='44' width='8' height='8' fill='%23172A46'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="../home/index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 110" fill="none">
+          <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+          <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+          <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+          <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+          <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="logo-word">Raga<em>House</em></span><br>
+        <span class="brand-sub">Home Music Tuitions</span>
+      </span>
+    </a>
+
+    <nav class="primary">
+      <div class="nav-item">
+        <a href="../home/index.html">Home
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="../home/index.html">Home 1</a>
+          <a href="../home2/home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a href="../instruments/instruments.html">Instruments</a>
+      <a href="../how-it-works/how-it-works.html">How It Works</a>
+      <a href="../pricing/pricing.html" class="active" aria-current="page">Pricing</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="../signup/signup.html" class="btn btn-primary btn-sm desktop-only">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+        <span class="btn-label">Sign Up</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel">
+    <details class="mobile-dropdown">
+      <summary>Home</summary>
+      <a href="../home/index.html">Home 1</a>
+      <a href="../home2/home-2.html">Home 2</a>
+    </details>
+    
+    <a href="../instruments/instruments.html">Instruments</a>
+    <a href="../how-it-works/how-it-works.html">How It Works</a>
+    <a href="../pricing/pricing.html">Pricing</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../signup/signup.html" class="btn btn-primary btn-sm mobile-signup-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+      <span class="btn-label">Sign Up</span>
+    </a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap page-hero-grid">
+    <div class="page-hero-inner">
+      <p class="eyebrow-note"><span class="dot"></span>Plans &amp; pricing</p>
+      <h1>Straightforward pricing for lessons <em>at your door</em></h1>
+      <p class="lead">One weekly visit or two, one instrument or an extra sibling along for the ride — pick the plan that matches how your family actually practices, and change it later if it doesn't.</p>
+      <div class="hero-chips">
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          No enrolment fee
+        </span>
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Cancel anytime
+        </span>
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          First class is free
+        </span>
+      </div>
+
+      <ul class="hero-quickfacts">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          60-minute, one-on-one lessons every week
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Switch instruments or plans anytime, no lock-in
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Save 10% automatically on quarterly billing
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Sibling discount available on every plan
+        </li>
+      </ul>
+
+      <div class="hero-ctas">
+        <a href="#plans" class="btn btn-ghost">See all plans</a>
+        <a href="../contact/contact.html" class="link-under">Book a free trial
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-spotlight">
+      <div class="hero-spotlight-ring" aria-hidden="true"></div>
+      <div class="hero-spotlight-main">
+        <img src="images/raga-piano.jpg" alt="Piano lesson at home">
+      </div>
+      <div class="hero-spotlight-accent">
+        <img src="images/raga-guitar.jpg" alt="Guitar lesson at home">
+      </div>
+      <div class="hero-spotlight-badge">
+        <span class="badge-eyebrow">Starting at</span>
+        <strong>₹2,499/mo</strong>
+        <span>First class free, cancel anytime</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plans" style="padding-top:0;">
+  <div class="wrap">
+
+    <div class="billing-toggle-wrap">
+      <div class="billing-toggle" role="group" aria-label="Billing cycle">
+        <button type="button" class="active" data-cycle="monthly">Monthly</button>
+        <button type="button" data-cycle="quarterly">Quarterly <span class="save-tag">Save 10%</span></button>
+      </div>
+    </div>
+
+    <div class="pricing-grid">
+
+      
+      <div class="price-card">
+        <h3 class="price-name">Starter</h3>
+        <p class="price-desc">One instrument, one weekly visit — the easiest way to start proper lessons.</p>
+        <div class="price-amount">
+          <span class="currency">₹</span>
+          <span class="num" data-monthly="2,499" data-quarterly="2,249">2,499</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="price-billed-note" data-monthly-note="Billed monthly" data-quarterly-note="Billed ₹6,747 every 3 months">Billed monthly</p>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>1 lesson a week, 60 minutes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>One instrument of your choice</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Practice notes after every visit</li>
+          <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority teacher matching</li>
+          <li class="muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly progress report</li>
+        </ul>
+        <a href="../contact/contact.html" class="btn btn-outline">Start with Starter</a>
+      </div>
+
+      <div class="price-card popular">
+        <span class="price-ribbon">Most popular</span>
+        <h3 class="price-name">Standard</h3>
+        <p class="price-desc">Our most-picked plan — the same weekly rhythm, with closer tracking of progress.</p>
+        <div class="price-amount">
+          <span class="currency">₹</span>
+          <span class="num" data-monthly="3,499" data-quarterly="3,149">3,499</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="price-billed-note" data-monthly-note="Billed monthly" data-quarterly-note="Billed ₹9,447 every 3 months">Billed monthly</p>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>1 lesson a week, 60 minutes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>One instrument of your choice</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Practice notes after every visit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority teacher matching</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Monthly progress report</li>
+        </ul>
+        <a href="../contact/contact.html" class="btn btn-primary">Start with Standard</a>
+      </div>
+
+      <div class="price-card">
+        <h3 class="price-name">Premium</h3>
+        <p class="price-desc">Two visits a week with a senior teacher, for students working toward exams or a stage.</p>
+        <div class="price-amount">
+          <span class="currency">₹</span>
+          <span class="num" data-monthly="5,999" data-quarterly="5,399">5,999</span>
+          <span class="period">/ month</span>
+        </div>
+        <p class="price-billed-note" data-monthly-note="Billed monthly" data-quarterly-note="Billed ₹16,197 every 3 months">Billed monthly</p>
+        <ul class="price-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>2 lessons a week, 60 minutes each</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Matched with a senior teacher</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Practice notes after every visit</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Priority teacher matching</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Exam &amp; recital preparation</li>
+        </ul>
+        <a href="../contact/contact.html" class="btn btn-outline">Start with Premium</a>
+      </div>
+
+    </div>
+
+    <div class="addons-grid">
+      <div class="addon-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18V5l12-2v13" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        <div>
+          <h4>Extra instrument</h4>
+          <p>Add a second instrument to any plan and split the same weekly visit between them.</p>
+          <p class="addon-price">+₹1,200 / month</p>
+        </div>
+      </div>
+      <div class="addon-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v18M5 8l7-5 7 5M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h4>Sibling discount</h4>
+          <p>A second child in the same household joins any plan at a reduced rate.</p>
+          <p class="addon-price">15% off their plan</p>
+        </div>
+      </div>
+      <div class="addon-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="5"/><path d="M8 13l-2 8 6-3 6 3-2-8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <h4>Exam &amp; recital sessions</h4>
+          <p>One-off intensive sessions ahead of a grade exam or school recital, any plan.</p>
+          <p class="addon-price">₹900 / session</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="background:var(--surface); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Questions</span>
+      <h2>Pricing, answered</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>What's included in a lesson?<span></span></summary>
+        <p>Every visit is a full 60-minute one-on-one lesson at your home, plus a short practice note the teacher leaves behind covering what to work on before the next visit. Teachers bring sheet music and, for tabla and violin, a spare instrument for your first trial class.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I switch instruments or plans later?</summary>
+        <p>Yes. You can change instrument, move between Starter, Standard and Premium, or add a second instrument at any time — changes apply from your next billing cycle.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Is there a refund or pause option?</summary>
+        <p>You can pause a plan for school holidays or travel with two days' notice, and cancel anytime with no exit fee. Unused lessons in a paid month carry forward for up to four weeks.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you offer a sibling discount?</summary>
+        <p>Yes — a second child in the same household gets 15% off their own plan, regardless of instrument or plan tier.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I pay?</summary>
+        <p>Monthly or quarterly, by UPI, card or net banking. Quarterly billing saves 10% compared to paying monthly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<section class="section trial-section" id="trial">
+  <div class="wrap">
+    <div class="trial-banner">
+      <div class="trial-banner-top">
+        <div class="trial-banner-copy">
+          <span class="eyebrow">Still deciding?</span>
+          <h2>Start with a free trial class</h2>
+          <p>No plan required to try it out — book a free trial and pick a plan afterwards if it's a fit.</p>
+
+          <div class="trial-avatars">
+            <div class="avatar-stack" aria-hidden="true">
+              <span>A</span><span>R</span><span>S</span><span>K</span>
+            </div>
+            <div class="trial-avatars-text">
+              <strong>500+ families in Hyderabad</strong>
+              <span class="stars">★★★★★ 4.9 average rating</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trial-banner-photo">
+          <img src="images/raga-trial-cinematic.jpg" alt="Close-up of hands on a piano keyboard">
+        </div>
+      </div>
+
+      <form class="trial-form trial-form-inline">
+        <div class="form-row">
+          <label for="name">Parent or student name</label>
+          <input id="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone number</label>
+          <input id="phone" type="tel" placeholder="10-digit number" required>
+        </div>
+        <div class="form-row">
+          <label for="instrument">Instrument</label>
+          <select id="instrument">
+            <option>Guitar</option>
+            <option>Piano</option>
+            <option>Violin</option>
+            <option>Tabla</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Request my free trial</button>
+      </form>
+      <p class="form-fine">We'll call within one business day to confirm a time.</p>
+    </div>
+  </div>
+</section>
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="../home/index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 110" fill="none">
+            <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+            <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+            <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+            <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+            <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+            <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Raga<em>House</em></span><br>
+          <span class="brand-sub">Home Music Tuitions</span>
+        </span>
+      </a>
+      <p class="footer-desc" style="margin-top:18px;">In-home lessons for guitar, piano, violin and tabla, taught by vetted teachers on a schedule built around your family.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../home2/home-2.html">Home 2</a></li>
+        <li><a href="../instruments/instruments.html">Instruments</a></li>
+        <li><a href="../how-it-works/how-it-works.html">How It Works</a></li>
+        <li><a href="../pricing/pricing.html">Pricing</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Additional Pages</h4>
+      <ul>
+        <li><a href="../additional/404.html">404 Page</a></li>
+        <li><a href="../additional/coming-soon.html">Coming Soon</a></li>
+        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+          +91 90000 00000
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          hello@ragahouse.in
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Hyderabad, Telangana
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 Raga House. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="../legal/terms.html">Terms</a>
+      <a href="../legal/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script src="../home/script.js"></script>
+<script src="pricing.js"></script>
+</body>
+</html>
