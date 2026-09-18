@@ -67,6 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
+  document.querySelectorAll('.map-frame').forEach(frame => {
+    const overlay = frame.querySelector('.map-overlay');
+    if (!overlay) return;
+    overlay.addEventListener('click', () => {
+      frame.classList.add('active');
+      overlay.remove();
+    });
+  });
+
+  
   const contactForm = document.querySelector('.contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {

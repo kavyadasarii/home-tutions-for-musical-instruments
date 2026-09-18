@@ -18,9 +18,11 @@ body.status-body{ height: 100vh; overflow: hidden; background: var(--bg); positi
   box-sizing: border-box;
 }
 
-.status-logo{ display:inline-flex; align-items:center; gap: 8px; margin-bottom: clamp(10px, 2.5vh, 24px); flex: none; }
+.status-logo{ display:inline-flex; align-items:center; gap: 5px; margin-bottom: clamp(10px, 2.5vh, 24px); flex: none; }
 .status-logo .brand-mark{ width: 30px; height: 28px; }
+.status-logo .logo-text{ display:flex; flex-direction:column; line-height: 1.15; text-align: left; }
 .status-logo .logo-word{ font-size: 16px; }
+.status-logo .brand-sub{ display:block; margin-top: 1px; font-size: 9px; color: var(--text-soft); letter-spacing: .03em; white-space: nowrap; }
 
 
 .status-illustration{ width: clamp(110px, 18vh, 190px); margin: 0 auto clamp(8px, 2vh, 22px); position: relative; flex: none; }

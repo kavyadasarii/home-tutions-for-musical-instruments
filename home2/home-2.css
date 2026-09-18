@@ -37,7 +37,7 @@
 
 .hero2-proof{
   display:flex; align-items:center; gap: 12px; margin-top: 46px;
-  padding-top: 26px; border-top: 1px solid var(--border);
+  padding-top: 26px; border-top: 1px solid var(--border); flex-wrap: wrap;
 }
 .hero2-proof .avatars{ display:flex; flex:none; }
 .hero2-proof .avatars span{
@@ -89,6 +89,10 @@
 @media (max-width: 640px){
   .hero2{ padding-bottom: 48px; }
   .hero2-proof{ margin-top: 36px; padding-top: 22px; }
+}
+@media (max-width: 380px){
+  .schedule-mini{ flex-direction: column; align-items: flex-start; gap: 10px; }
+  .instrument-strip .h2-head a{ white-space: normal; text-align: center; }
 }
 
 
@@ -149,41 +153,41 @@
 .instrument-strip{ background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .instrument-strip .h2-head{ display:flex; align-items:flex-end; justify-content:space-between; max-width:none; gap: 24px; flex-wrap: wrap; }
 .instrument-strip .h2-head > div{ max-width: 620px; }
-.instrument-strip .h2-head a{
-  font-size: 13.5px; color: var(--text); border-bottom: 1px solid var(--border); padding-bottom: 2px; flex:none;
-  display:inline-flex; align-items:center; gap:6px;
-}
-.instrument-strip .h2-head a:hover{ color: var(--gold); border-color: var(--gold); }
+.instrument-strip .h2-head a{ flex:none; }
 .instrument-strip .h2-head a svg{ width:13px; height:13px; }
 
 .instrument-rows{
-  margin-top: 40px; display:grid; grid-template-columns: repeat(2, 1fr); gap: 18px;
+  margin-top: 40px; display:grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
 }
 .instrument-row{
-  display:flex; align-items:center; gap: 20px; padding: 22px; border-radius: var(--radius-lg);
+  display:flex; flex-direction:column; border-radius: var(--radius-lg); overflow:hidden;
   background: var(--bg); border: 1px solid var(--border);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 .instrument-row:hover{ transform: translateY(-4px); box-shadow: var(--shadow); border-color: var(--gold-soft); }
-.ir-photo{ width: 68px; height: 68px; border-radius: var(--radius); overflow:hidden; flex:none; background: var(--surface); }
-.ir-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .45s ease; }
-.instrument-row:hover .ir-photo img{ transform: scale(1.08); }
-.ir-body{ flex:1; min-width:0; }
-.ir-top{ display:flex; align-items:baseline; justify-content:space-between; gap: 14px; }
+.ir-photo{ position:relative; aspect-ratio: 4 / 3.2; overflow:hidden; background: var(--surface); }
+.ir-photo img{ width:100%; height:100%; object-fit:cover; display:block; transition: transform .5s ease; }
+.instrument-row:hover .ir-photo img{ transform: scale(1.06); }
+.ir-body{ flex:1; min-width:0; padding: 20px 20px 22px; display:flex; flex-direction:column; }
+.ir-top{ display:flex; align-items:baseline; justify-content:space-between; gap: 10px; }
 .ir-top h3{ font-size: 17px; font-weight: 460; color: var(--text); }
 .ir-price{ font-family:'Fraunces', serif; font-size: 16px; color: var(--gold); flex:none; white-space:nowrap; }
 .ir-price small{ font-family:'Work Sans', sans-serif; font-size: 11px; color: var(--text-soft); font-weight:400; }
-.instrument-row p{ margin-top: 5px; font-size: 12.5px; color: var(--text-soft); line-height: 1.5; }
-.ir-arrow{ width:15px; height:15px; color: var(--text-soft); flex:none; transition: transform .2s ease, color .2s ease; }
-.instrument-row:hover .ir-arrow{ transform: translateX(3px); color: var(--gold); }
+.instrument-row p{ margin-top: 6px; font-size: 12.5px; color: var(--text-soft); line-height: 1.5; }
+.ir-cta{
+  margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border);
+  display:flex; align-items:center; justify-content:space-between; gap:6px;
+  font-size: 12.5px; font-weight:500; color: var(--text); transition: color .2s ease;
+}
+.ir-cta svg{ width:14px; height:14px; color: var(--text-soft); flex:none; transition: transform .2s ease, color .2s ease; }
+.instrument-row:hover .ir-cta{ color: var(--gold); }
+.instrument-row:hover .ir-cta svg{ transform: translateX(3px); color: var(--gold); }
 
-@media (max-width: 760px){
-  .instrument-rows{ grid-template-columns: 1fr; }
+@media (max-width: 900px){
+  .instrument-rows{ grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px){
-  .ir-photo{ width:58px; height:58px; }
-  .instrument-row{ padding: 16px; gap: 14px; }
-  .ir-top{ flex-direction:column; align-items:flex-start; gap:4px; }
+  .instrument-rows{ grid-template-columns: 1fr; }
 }
 
 
@@ -306,11 +310,19 @@
 .cta-banner2-actions{ display:flex; align-items:center; gap: 16px; flex-wrap: wrap; flex:none; }
 
 .cta-banner2 .btn-primary{
-  background: var(--cta-gold); border: 1px solid var(--cta-gold); color: #1A1204;
+  /* Light mode: match the site's normal primary-button navy (same as the
+     nav "Sign Up" button) instead of the old fixed gold. Dark mode keeps
+     gold below, since a navy button would disappear into this section's
+     permanently-dark overlay once the surrounding page also goes dark. */
+  background: #172A46; border: 1px solid #172A46; color: var(--cta-cream);
 }
-.cta-banner2 .btn-primary:hover{ background: var(--gold-soft, #D8B778); border-color: var(--gold-soft, #D8B778); color: #1A1204; }
-.cta-banner2 .btn-outline{ background: transparent; border: 1px solid rgba(251,244,230,.32); color: var(--cta-cream); }
-.cta-banner2 .btn-outline:hover{ border-color: var(--cta-cream); background: rgba(251,244,230,.08); color: var(--cta-cream); }
+.cta-banner2 .btn-primary:hover{ background: #223a5e; border-color: #223a5e; color: var(--cta-cream); }
+
+html[data-theme="dark"] .cta-banner2 .btn-primary{
+  background: var(--cta-gold); border-color: var(--cta-gold); color: #1A1204;
+}
+html[data-theme="dark"] .cta-banner2 .btn-primary:hover{ background: var(--gold-soft, #D8B778); border-color: var(--gold-soft, #D8B778); color: #1A1204; }
+.cta-banner2 .btn-ghost{ border-color: rgba(251,244,230,.32); }
 .cta-banner2 .btn:focus-visible{ outline: 2px solid var(--cta-cream); outline-offset: 3px; }
 
 @media (max-width: 700px){

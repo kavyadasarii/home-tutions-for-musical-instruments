@@ -33,7 +33,7 @@ body.dashboard-body{ min-height: 100vh; overflow: hidden; }
 .sidebar-toggle{ display:none; }
 
 .dash-topbar .dash-brand{
-  display:flex; align-items:center !important; gap: 10px; min-width:0;
+  display:flex; align-items:center !important; gap: 5px; min-width:0;
   height: auto !important; padding: 0 !important; margin: 0 !important;
 }
 .dash-topbar .dash-brand .brand-mark{ width: 36px; height: 33px; flex: none; }
@@ -276,9 +276,18 @@ html[data-theme="dark"] .badge-gold{ color: #2A1F0B; }
 .recording-card{ overflow:hidden; }
 .recording-thumb{
   position:relative; aspect-ratio: 16/10; display:flex; align-items:center; justify-content:center;
-  background: linear-gradient(135deg, var(--ink) 0%, #2b4066 100%);
+  overflow:hidden; background: linear-gradient(135deg, var(--ink) 0%, #2b4066 100%);
 }
 html[data-theme="dark"] .recording-thumb{ background: linear-gradient(135deg, #1b2c46 0%, #0e1826 100%); }
+.recording-thumb img{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:0;
+}
+.recording-thumb::after{
+  content:""; position:absolute; inset:0; z-index:1;
+  background: linear-gradient(180deg, rgba(14,20,32,.15) 0%, rgba(14,20,32,.55) 100%);
+}
+.recording-thumb .play-circle{ position:relative; z-index:2; }
+.recording-thumb .rec-duration{ z-index:2; }
 .recording-thumb .play-circle{
   width: 52px; height:52px; border-radius:50%; background: rgba(251,244,230,.16); border: 1.5px solid rgba(251,244,230,.55);
   display:flex; align-items:center; justify-content:center; cursor:pointer; transition: background .15s ease, transform .15s ease;
@@ -411,7 +420,7 @@ html[data-theme="dark"] .due-card .btn-primary{ color: #2A1F0B; }
   .dash-topbar{ padding: 0 12px; }
   .topbar-left{ gap: 8px; }
   .topbar-right{ gap: 4px; }
-  .dash-brand{ gap: 6px; }
+  .dash-brand{ gap: 5px; }
   .dash-brand .brand-mark{ width: 26px; height: 24px; }
   .dash-brand .logo-word{ font-size: 13.5px; }
   

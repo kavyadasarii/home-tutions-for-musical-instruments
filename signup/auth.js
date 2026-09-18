@@ -1,6 +1,3 @@
-// =======================================================================
-// RAGA HOUSE — Auth page interactions (Login / Sign Up)
-// =======================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 

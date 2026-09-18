@@ -3,7 +3,7 @@
   .legal-page{ padding: 56px 20px 90px; position: relative; }
   .legal-wrap{ max-width: 800px; margin: 0 auto; }
 
-  .legal-brand{ display:flex; justify-content:center; align-items:center; gap:10px; text-decoration:none; width:100%; margin: 0 auto 24px; }
+  .legal-brand{ display:flex; justify-content:center; align-items:center; gap:5px; text-decoration:none; width:100%; margin: 0 auto 24px; }
   .legal-brand .brand-mark{ width:34px; height:31px; flex:none; }
   .legal-brand .logo-word{ font-family:'Fraunces', serif; font-size:18px; font-weight:500; color:var(--ink); display:block; line-height:1.2; }
   .legal-brand .logo-word em{ color:var(--gold); font-style:italic; }
@@ -17,6 +17,10 @@
     display:flex; align-items:center; gap:10px;
     position:absolute; top: 24px; inset-inline-end: 20px; margin:0; z-index:5;
   }
+  .legal-toolbar #dir-toggle,
+  .legal-toolbar #theme-toggle{ border: 1px solid var(--border); }
+  .legal-toolbar #dir-toggle:hover,
+  .legal-toolbar #theme-toggle:hover{ border-color: var(--gold); }
 
   .legal-toc{ background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 22px; margin-bottom:44px; }
   .legal-toc h2{ font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:var(--text-soft); margin:0 0 12px; font-weight:600; }
