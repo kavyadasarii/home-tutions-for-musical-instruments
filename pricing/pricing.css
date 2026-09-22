@@ -138,6 +138,29 @@ html[data-theme="dark"] .icon-btn .moon{ display:block; }
 .mobile-dropdown a:hover{ color: var(--gold); }
 .mobile-dropdown a:last-child{ padding-bottom: 14px; }
 
+/* The shared home/style.css also styles .mobile-dropdown summary (for the Home
+   row) and loads after this file, so its unconditional display:flex/
+   justify-content:space-between was winning above the 640px breakpoint and
+   pushing "Home" to the left while every other item here stays centered.
+   Scoping to #mobile-panel raises specificity so this page's centered,
+   full-width layout always wins, at every width, regardless of load order. */
+#mobile-panel .mobile-dropdown summary{
+  display:flex; align-items:center; justify-content:center; gap:6px;
+  padding: 11px 4px;
+}
+#mobile-panel .mobile-dropdown summary::after{
+  content:"";
+  position:static;
+  width:9px; height:9px;
+  border-right: 1.6px solid var(--text-soft);
+  border-bottom: 1.6px solid var(--text-soft);
+  transform: rotate(45deg);
+  transition: transform .18s ease;
+  flex: none;
+  margin:0;
+}
+#mobile-panel .mobile-dropdown[open] summary::after{ transform: rotate(225deg); }
+
 
 .hero{ position: relative; }
 .hero-frame{ position: relative; height: 88vh; min-height: 560px; max-height: 820px; overflow: hidden; }

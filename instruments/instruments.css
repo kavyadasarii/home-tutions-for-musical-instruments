@@ -675,8 +675,10 @@ footer.site .brand-sub{ color: var(--text-soft); }
   .steps{ grid-template-columns: 1fr; }
   .trial-form{ padding: 28px; }
 
-  .mobile-panel{ align-items:center; text-align:center; }
+  .mobile-panel{ text-align:center; }
   .mobile-panel > a{ text-align:center; }
+  .mobile-dropdown summary{ justify-content:center; gap:10px; }
+  .mobile-dropdown a{ text-align:center; padding-left: 4px; }
 
   .footer-grid{ grid-template-columns: 1fr; text-align:center; }
   .footer-brand{ display:flex; flex-direction:column; align-items:center; }
