@@ -16,10 +16,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
   const dirToggle = document.getElementById('dir-toggle');
+  const updateDirLabel = () => {
+    if (dirToggle) {
+      dirToggle.textContent = root.getAttribute('dir') === 'rtl' ? 'LTR' : 'RTL';
+    }
+  };
   if (dirToggle) {
     dirToggle.addEventListener('click', () => {
       const next = root.getAttribute('dir') === 'rtl' ? 'ltr' : 'rtl';
       root.setAttribute('dir', next);
+      localStorage.setItem('ragahouse-dir', next);
+      updateDirLabel();
+    });
+  }
+  const savedDir = localStorage.getItem('ragahouse-dir');
+  if (savedDir) root.setAttribute('dir', savedDir);
+  updateDirLabel();
+
+  
+  const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!hasHover) {
+    document.querySelectorAll('.nav-item').forEach((item) => {
+      const link = item.querySelector(':scope > a');
+      const dropdown = item.querySelector('.dropdown');
+      if (!link || !dropdown) return;
+      link.addEventListener('click', (e) => {
+        if (!item.classList.contains('open')) {
+          e.preventDefault();
+          document.querySelectorAll('.nav-item.open').forEach((other) => {
+            if (other !== item) other.classList.remove('open');
+          });
+          item.classList.add('open');
+        }
+      });
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item')) {
+        document.querySelectorAll('.nav-item.open').forEach((item) => item.classList.remove('open'));
+      }
     });
   }
 
@@ -43,43 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const fine = trialForm.querySelector('.form-fine');
       if (fine) fine.textContent = 'Thanks — a teacher will call you shortly.';
-    });
-  }
-
-  
-  const billingToggle = document.querySelector('.billing-toggle');
-  if (billingToggle) {
-    const buttons = billingToggle.querySelectorAll('button');
-    const priceEls = document.querySelectorAll('.price-amount .num');
-    const noteEls = document.querySelectorAll('.price-billed-note');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const cycle = btn.dataset.cycle;
-        priceEls.forEach(el => { el.textContent = el.dataset[cycle]; });
-        noteEls.forEach(el => { el.textContent = el.dataset[cycle + 'Note']; });
-      });
-    });
-  }
-
-  
-  document.querySelectorAll('.map-frame').forEach(frame => {
-    const overlay = frame.querySelector('.map-overlay');
-    if (!overlay) return;
-    overlay.addEventListener('click', () => {
-      frame.classList.add('active');
-      overlay.remove();
-    });
-  });
-
-  
-  const contactForm = document.querySelector('.contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const fine = contactForm.querySelector('.form-fine');
-      if (fine) fine.textContent = "Thanks — we'll get back to you within one business day.";
     });
   }
 });

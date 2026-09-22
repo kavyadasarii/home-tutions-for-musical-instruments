@@ -1,6 +1,3 @@
-// =======================================================================
-// RAGA HOUSE — Status page interactions (404 / Coming Soon)
-// =======================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
   const toastEl = document.getElementById('toast');

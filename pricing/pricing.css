@@ -1,7 +1,3 @@
-/* =======================================================================
-   RAGA HOUSE — Home Music Tuitions
-   Premium editorial edition — Navy / Gold / Ivory
-   ======================================================================= */
 
 :root{
   --ink: #172A46;             
@@ -666,10 +662,6 @@ footer.site .brand-sub{ color: var(--text-soft); }
   .footer-grid{ grid-template-columns: 1fr; }
   .footer-bottom{ flex-direction:column; gap:12px; align-items:center; text-align:center; }
 }
-
-/* =======================================================================
-   INNER PAGE HERO — used by pricing.html, contact.html
-   ======================================================================= */
 .page-hero{ position:relative; background: var(--bg); border-bottom: 1px solid var(--border); overflow:hidden; padding: 40px 0 86px; }
 html[data-theme="dark"] .page-hero{ background: var(--surface); }
 .page-hero .wrap{ position:relative; z-index:2; }
@@ -746,10 +738,6 @@ html[data-theme="dark"] .hero-spotlight-accent{ border-color: var(--surface); }
   .hero-spotlight-badge{ left: -10px; bottom: -26px; padding: 13px 16px; max-width: 200px; }
   .hero-spotlight-badge strong{ font-size: 18px; }
 }
-
-/* =======================================================================
-   PRICING PAGE
-   ======================================================================= */
 .billing-toggle-wrap{ display:flex; justify-content:center; margin: -34px 0 56px; position:relative; z-index: 3; }
 .billing-toggle{ display:inline-flex; align-items:center; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 5px; box-shadow: var(--shadow); gap: 2px; }
 .billing-toggle button{ border:none; background:transparent; padding: 11px 22px; border-radius: 999px; font-size: 13.5px; font-weight:600; color: var(--text-soft); font-family: inherit; display:flex; align-items:center; gap: 8px; transition: background .18s ease, color .18s ease; }
@@ -795,10 +783,6 @@ html[data-theme="dark"] .hero-spotlight-accent{ border-color: var(--surface); }
   .price-card.popular{ transform:none; order:-1; }
   .addons-grid{ grid-template-columns: 1fr; }
 }
-
-/* =======================================================================
-   CONTACT PAGE
-   ======================================================================= */
 .contact-grid{ display:grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items:start; }
 .contact-form-card{ background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 42px; box-shadow: var(--shadow); }
 .contact-form-card h2{ font-size: 23px; font-weight: 460; }

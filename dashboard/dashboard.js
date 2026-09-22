@@ -1,6 +1,3 @@
-// =======================================================================
-// RAGA HOUSE — Student Dashboard interactions
-// =======================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 

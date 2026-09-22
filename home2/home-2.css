@@ -1,12 +1,3 @@
-/* =======================================================================
-   RAGA HOUSE — Home 2
-   A scheduling-led alternate homepage. Same brand tokens (navy/gold/ivory,
-   Fraunces + Work Sans) as Home 1, but a different structural idea end to
-   end: the "week" is the hero image, a locality ticker replaces the stat
-   bar, a numbered process replaces the photo-led sections, instruments are
-   shown as a comparison strip instead of a photo gallery, and the page
-   closes on a plain two-button banner instead of a form.
-   ======================================================================= */
 
 
 .h2-section{ padding: 96px 0; }
@@ -281,13 +272,6 @@
 .faq-item p{ margin: 0 2px 18px; font-size: 14px; line-height: 1.65; color: var(--text-soft); max-width: 56ch; }
 
 @media (max-width: 900px){ .faq-layout{ grid-template-columns: 1fr; gap: 24px; } }
-
-/* ================= CLOSING BANNER =================
-   This banner always sits on a fixed dark navy photo overlay, so its colours
-   are declared locally rather than pulled from --ink / --ink-contrast. Those
-   two tokens swap when [data-theme="dark"] is active, which previously left
-   dark text sitting on the dark overlay. Local vars keep it identical in
-   both themes and immune to future token changes. */
 .cta-banner2{
   --cta-navy: #0E1420;
   --cta-cream: #FBF4E6;

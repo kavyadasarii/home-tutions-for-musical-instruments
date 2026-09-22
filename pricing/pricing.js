@@ -1,9 +1,3 @@
-// =======================================================================
-// RAGA HOUSE — pricing page interactions
-// (theme toggle, RTL toggle, mobile menu, and trial-form handling
-//  already live in script.js, which this page also loads — keeping
-//  them out of this file avoids double-binding the same buttons.)
-// =======================================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
