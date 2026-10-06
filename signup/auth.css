@@ -84,9 +84,12 @@ body.auth-body{
 
 .pw-field{ position: relative; }
 .pw-field input{ padding-inline-end: 44px !important; }
+.pw-field input::-ms-reveal,
+.pw-field input::-ms-clear{ display:none; width:0; height:0; }
+.pw-field input::-webkit-credentials-auto-fill-button{ visibility:hidden; display:none !important; pointer-events:none; position:absolute; right:0; }
 .pw-toggle{
-  position:absolute; top: 23px; inset-inline-end: 4px;
-  width: 34px; height: 34px; border: none; background: none; color: var(--text-soft);
+  position:absolute; top: 18px; inset-inline-end: 4px;
+  width: 34px; height: 33px; border: none; background: none; color: var(--text-soft);
   display:flex; align-items:center; justify-content:center; border-radius: var(--radius); cursor:pointer;
 }
 .pw-toggle:hover{ color: var(--text); background: var(--border); }
