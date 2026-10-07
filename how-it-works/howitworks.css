@@ -664,3 +664,75 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .overview-grid, .steps-grid, .steps-grid-secondary, .trust-grid{ grid-template-columns: 1fr; }
   .trust-grid{ background: var(--border); }
 }
+
+
+/* =========================================================
+   Hover effects
+   ========================================================= */
+
+/* Transitions */
+.overview-item, .step-card, .difference-point, .trust-card, .faq-item, .story-image, .difference-image{
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease, background-color .3s ease;
+}
+.step-photo img, .hero-frame img, .cta-banner .bg-photo img{ transition: transform .7s cubic-bezier(.2,.7,.2,1); }
+.step-number, .difference-number, .trust-icon{ transition: transform .3s ease, background-color .3s ease, color .3s ease, border-color .3s ease; }
+.overview-item .ov-num, .overview-item h3, .step-body h3, .difference-point h3, .trust-card h3{ transition: color .3s ease; }
+
+/* Buttons */
+.btn:hover{ transform: translateY(-2px); }
+.btn-primary:hover{ box-shadow: 0 10px 26px rgba(23,42,70,.28); }
+.btn-outline:hover, .btn-ghost:hover{ box-shadow: 0 10px 26px rgba(23,42,70,.16); }
+.link-under{ transition: color .2s ease, border-color .2s ease, gap .2s ease; }
+.link-under:hover{ gap: 10px; }
+
+/* Hero + CTA banner background photos */
+.hero-frame:hover img{ transform: scale(1.04); }
+.cta-banner:hover .bg-photo img{ transform: scale(1.05); }
+
+/* Overview (3 intro items) */
+.overview-item{ padding-bottom: 6px; }
+.overview-item:hover{ transform: translateY(-5px); border-top-color: var(--gold); }
+.overview-item:hover .ov-num{ color: var(--ink); }
+.overview-item:hover h3{ color: var(--gold); }
+
+/* Step cards */
+.step-card:hover{ transform: translateY(-8px); box-shadow: var(--shadow); border-color: var(--gold); }
+.step-card:hover .step-photo img{ transform: scale(1.06); }
+.step-card:hover .step-number{ background: var(--gold); color: #fff; transform: scale(1.12) rotate(-6deg); }
+.step-card:hover .step-body h3{ color: var(--gold); }
+
+/* First-lesson image + points */
+.difference-image:hover img{ transform: scale(1.05); }
+.difference-point:hover{ background: var(--surface); }
+.difference-point:hover .difference-number{ background: var(--gold); color: #fff; transform: scale(1.1); }
+.difference-point:hover h3{ color: var(--gold); }
+
+/* Scheduling image */
+.story-image:hover{ box-shadow: var(--shadow); }
+.story-image:hover img{ transform: scale(1.05); }
+.story-image-caption, .difference-image-caption{ transition: transform .4s ease; }
+.story-image:hover .story-image-caption, .difference-image:hover .difference-image-caption{ transform: translateY(-6px); }
+
+/* Trust cards (grid clips overflow, so use colour + icon, not lift) */
+.trust-card:hover{ background: var(--bg); }
+.trust-card:hover .trust-icon{ background: var(--gold); color: #fff; border-color: var(--gold); transform: translateY(-3px) scale(1.08); }
+.trust-card:hover h3{ color: var(--gold); }
+
+/* Testimonials / teachers (if used on this page) */
+.testimonial-card, .teacher-card{ transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.testimonial-card:hover, .teacher-card:hover{ transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
+.teacher-photo img{ transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.teacher-card:hover .teacher-photo img{ transform: scale(1.05); }
+
+/* FAQ */
+.faq-item summary{ transition: color .25s ease, padding .25s ease; }
+.faq-item:hover{ border-bottom-color: var(--gold); }
+.faq-item summary:hover{ color: var(--gold); padding-inline-start: 14px; }
+.faq-item summary::after{ transition: transform .25s ease; }
+.faq-item summary:hover::after{ transform: scale(1.25); }
+
+/* Touch devices: no sticky hover states */
+@media (hover: none){
+  .step-card:hover, .overview-item:hover, .testimonial-card:hover, .teacher-card:hover, .btn:hover{ transform: none; }
+  .hero-frame:hover img, .cta-banner:hover .bg-photo img, .story-image:hover img, .difference-image:hover img, .step-card:hover .step-photo img{ transform: none; }
+}

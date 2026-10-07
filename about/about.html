@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us — Raga House</title>
+<meta name="description" content="Raga House brings vetted guitar, piano, violin and tabla teachers to your home in Hyderabad. Read about our mission, our vision and the values behind every lesson.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,460;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="../home/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 110'%3E%3Cpath d='M10 82c20 10 38 4 50-6' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M24 62c7-11 4-22-6-30' stroke='%23B98A3A' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Cpath d='M15 46c7-2 12-9 9-16-7 2-12 9-9 16z' fill='%23B98A3A'/%3E%3Cpath d='M24 60c7-1 12-7 11-14-7 1-12 7-11 14z' fill='%23B98A3A'/%3E%3Cpath d='M22 54 L52 20 L52 20' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M52 20 L88 54' stroke='%23172A46' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M88 10 V70' stroke='%23172A46' stroke-width='7' stroke-linecap='round'/%3E%3Cpath d='M88 10c16 7 22 19 15 32-4-11-11-18-15-20z' fill='%23172A46'/%3E%3Cellipse cx='80' cy='76' rx='13' ry='10' fill='%23172A46' transform='rotate(-20 80 76)'/%3E%3Crect x='38' y='44' width='8' height='8' fill='%23172A46'/%3E%3Crect x='50' y='44' width='8' height='8' fill='%23172A46'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap nav-row">
+    <a href="../home/index.html" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 120 110" fill="none">
+          <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+          <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+          <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+          <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+          <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+          <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="logo-word">Raga<em>House</em></span><br>
+        <span class="brand-sub">Home Music Tuitions</span>
+      </span>
+    </a>
+
+    <nav class="primary">
+      <div class="nav-item">
+        <a href="../home/index.html">Home
+          <svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="dropdown">
+          <a href="../home/index.html">Home 1</a>
+          <a href="../home2/home-2.html">Home 2</a>
+        </div>
+      </div>
+      <a href="../about/about.html" class="active" aria-current="page">About Us</a>
+      <a href="../instruments/instruments.html">Instruments</a>
+      <a href="../how-it-works/how-it-works.html">How It Works</a>
+      <a href="../pricing/pricing.html">Pricing</a>
+      <a href="../contact/contact.html">Contact</a>
+      <a href="../dashboard/dashboard.html">Dashboard</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-sm" id="dir-toggle" aria-label="Toggle text direction">RTL</button>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1L5.6 5.6" stroke-linecap="round"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" stroke-linejoin="round"/></svg>
+      </button>
+      <a href="../signup/signup.html" class="btn btn-primary btn-sm desktop-only">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+        <span class="btn-label">Sign Up</span>
+      </a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-panel" id="mobile-panel">
+    <details class="mobile-dropdown">
+      <summary>Home</summary>
+      <a href="../home/index.html">Home 1</a>
+      <a href="../home2/home-2.html">Home 2</a>
+    </details>
+    
+    <a href="../about/about.html">About Us</a>
+      <a href="../instruments/instruments.html">Instruments</a>
+    <a href="../how-it-works/how-it-works.html">How It Works</a>
+    <a href="../pricing/pricing.html">Pricing</a>
+    <a href="../contact/contact.html">Contact</a>
+    <a href="../dashboard/dashboard.html">Dashboard</a>
+    <a href="../signup/signup.html" class="btn btn-primary btn-sm mobile-signup-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.4"/><path d="M5 20c1.4-3.6 4.2-5.4 7-5.4S18.6 16.4 20 20" stroke-linecap="round"/></svg>
+      <span class="btn-label">Sign Up</span>
+    </a>
+  </div>
+</header>
+
+<section class="about-hero">
+  <div class="wrap about-hero-grid">
+    <div class="about-hero-copy">
+      <p class="eyebrow-note"><span class="dot"></span>About us</p>
+      <h1>Instrument lessons that belong at <em>home</em></h1>
+      <p class="lead">Raga House brings vetted guitar, piano, violin and tabla teachers to your home across Hyderabad, with one-to-one lessons built around each learner’s pace and goals.</p>
+      <div class="about-chips">
+        <span class="about-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Vetted teachers</span>
+        <span class="about-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>One-on-one lessons</span>
+        <span class="about-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>At your doorstep</span>
+      </div>
+      <div class="about-ctas">
+        <a href="#mission" class="btn btn-primary">Our mission &amp; vision</a>
+        <a href="../contact/contact.html" class="btn btn-outline">Book a free trial</a>
+      </div>
+      <div class="about-hero-note">
+        <div class="about-hero-note-item"><strong>4 instruments</strong><span>Guitar, piano, violin &amp; tabla</span></div>
+        <div class="about-hero-note-item"><strong>Free trial</strong><span>No obligation to continue</span></div>
+        <div class="about-hero-note-item"><strong>Ages 5 to 60+</strong><span>Beginners welcome</span></div>
+      </div>
+    </div>
+    <div class="about-spot">
+      <div class="about-spot-ring" aria-hidden="true"></div>
+      <div class="about-spot-main"><img src="https://images.unsplash.com/photo-1758687126741-86737c57c210?auto=format&fit=crop&w=1200&q=85" alt="A father teaching his son to play guitar at home" fetchpriority="high"></div>
+      <div class="about-spot-accent"><img src="https://images.unsplash.com/photo-1758524944402-1903b38f848f?auto=format&fit=crop&w=600&q=85" alt="An in-home guitar lesson between a teacher and student" loading="lazy"></div>
+      <div class="about-spot-badge"><small>Trusted by</small><strong>500+ families</strong><span>learning at home across Hyderabad</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="stats-float-wrap wrap">
+  <div class="stats-float">
+    <div class="stat"><div class="num">500+</div><div class="lbl">families learning at home</div></div>
+    <div class="stat"><div class="num">9 yrs</div><div class="lbl">average teacher experience</div></div>
+    <div class="stat"><div class="num">30+</div><div class="lbl">Hyderabad localities covered</div></div>
+    <div class="stat"><div class="num">4.9 / 5</div><div class="lbl">average family rating</div></div>
+  </div>
+</div>
+
+<section class="section about-values about-story">
+  <div class="wrap about-story-grid">
+    <div class="about-story-media">
+      <div class="about-story-frame"><img src="https://images.unsplash.com/photo-1706456873949-f7651c55a562?auto=format&fit=crop&w=1200&q=85" alt="A young child practising piano with sheet music at home" loading="lazy"></div>
+      <div class="about-story-note"><strong>Every journey starts with a conversation</strong><span>We learn about the student before we pick a teacher.</span></div>
+    </div>
+    <div class="about-story-copy">
+      <span class="eyebrow">Our story</span>
+      <h2>Born from a simple question: why is good music tuition so hard to reach?</h2>
+      <p>Families in Hyderabad told us the same thing again and again. They wanted their child to learn an instrument, but long traffic-filled commutes, fixed batch timings and large classes made it hard to stay consistent.</p>
+      <p>Raga House began as an answer to that. We bring experienced teachers to the learner, so the lesson happens in a familiar space, at a convenient time, with full attention on one student.</p>
+      <p>Today we support learners of every age, from first-time children to adults picking up an instrument they always loved. Our focus has never changed: patient teaching, honest feedback and music that is enjoyable to practise.</p>
+      <ul class="about-story-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Small, personal and consistent, never a crowd</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Beginners and returning learners are equally welcome</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Western and Indian instruments under one roof</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="mission">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">What guides us</span>
+      <h2>Our mission and our vision</h2>
+      <p>Why Raga House makes quality instrument tuition easier for families across Hyderabad.</p>
+    </div>
+    <div class="about-mv-grid">
+      <article class="about-mv-card">
+        <div class="about-mv-media">
+          <img src="https://images.unsplash.com/photo-1758612897772-8f4524c94b62?auto=format&fit=crop&w=1200&q=85" alt="A grandfather teaching his grandson guitar at home" loading="lazy">
+          <span class="about-mv-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg>Our mission</span>
+        </div>
+        <div class="about-mv-body">
+          <h3>Make every instrument lesson personal and joyful</h3>
+          <p>We bring skilled, caring teachers to your home so children and adults can learn guitar, piano, violin or tabla without the commute, crowded classes or pressure. Every lesson is one-to-one and shaped around the learner’s level, interests and goals.</p>
+          <ul class="about-mv-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>One-to-one lessons at your doorstep</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Teachers matched to the learner and instrument</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Simple practice guidance after every lesson</li>
+          </ul>
+        </div>
+      </article>
+      <article class="about-mv-card">
+        <div class="about-mv-media">
+          <img src="https://images.unsplash.com/photo-1540593463874-59835505e99d?auto=format&fit=crop&w=1200&q=85" alt="A woman and child playing piano together at home" loading="lazy">
+          <span class="about-mv-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Our vision</span>
+        </div>
+        <div class="about-mv-body">
+          <h3>A Hyderabad where every home can learn an instrument</h3>
+          <p>We imagine a city where high-quality instrument tuition is convenient and personal: where a child can learn piano after school, a teenager can build guitar skills, an adult can start violin, and families can discover the rhythm of tabla at home.</p>
+          <ul class="about-mv-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Instrument tuition that fits family routines</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Guitar, piano, violin and tabla for different goals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg>Skills for confidence, enjoyment and exams</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+    <div class="about-journey">
+      <div class="about-journey-head">
+        <span class="eyebrow">Our journey</span>
+        <h3>How Raga House has grown, one home at a time</h3>
+      </div>
+      <ol class="about-journey-list">
+        <li class="about-journey-item"><span class="about-journey-dot" aria-hidden="true"></span><strong>The first lessons</strong><p>A handful of teachers and families, and one simple idea: bring the classroom home.</p></li>
+        <li class="about-journey-item"><span class="about-journey-dot" aria-hidden="true"></span><strong>Growing by word of mouth</strong><p>Parents recommended us to neighbours, and 500+ families now learn with us.</p></li>
+        <li class="about-journey-item"><span class="about-journey-dot" aria-hidden="true"></span><strong>Four instruments</strong><p>Guitar and piano were joined by violin and tabla, covering Western and Indian music.</p></li>
+        <li class="about-journey-item"><span class="about-journey-dot" aria-hidden="true"></span><strong>Across Hyderabad</strong><p>Today our teachers reach 30+ localities, with a free trial for every new learner.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section about-values">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">What we teach</span>
+      <h2>Four instruments, every level</h2>
+      <p>From a first note to graded exams and stage performances.</p>
+    </div>
+    <div class="about-inst-grid">
+      <a class="about-inst" href="../instruments/instrument-detail.html#guitar"><span class="about-inst-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 10l6-6"/><path d="M17 3l4 4"/><path d="M11 13a4 4 0 10-5.7 5.7 4 4 0 005.7-5.7z"/><path d="M8.5 15.5l1-1"/></svg></span><h3>Guitar</h3><p>Acoustic and electric, from chords and strumming to lead playing and songwriting.</p><span class="about-inst-meta">Acoustic &middot; Electric &middot; Classical</span></a>
+      <a class="about-inst" href="../instruments/instrument-detail.html#piano"><span class="about-inst-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M9 6v12"/><path d="M15 6v12"/><path d="M7 6v6"/><path d="M13 6v6"/><path d="M19 6v6"/></svg></span><h3>Piano</h3><p>Reading, technique and playing by ear, with exam preparation when you are ready.</p><span class="about-inst-meta">Keyboard &middot; Piano &middot; Theory</span></a>
+      <a class="about-inst" href="../instruments/instrument-detail.html#violin"><span class="about-inst-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3c0 2 2 2 2 4s-3 2-3 5 2 4 2 6"/><path d="M5 12c0 4 3 8 7 8s7-4 7-8c0-3-2-4-3-4"/><path d="M17 3l-5 9"/></svg></span><h3>Violin</h3><p>Posture, bowing and intonation taught gently, in Western and Indian styles.</p><span class="about-inst-meta">Western &middot; Carnatic &middot; Hindustani</span></a>
+      <a class="about-inst" href="../instruments/instrument-detail.html#tabla"><span class="about-inst-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10c0-2 3.6-3.5 8-3.5s8 1.5 8 3.5-3.6 3.5-8 3.5-8-1.5-8-3.5z"/><path d="M5 12v4c0 2 3 3.5 7 3.5s7-1.5 7-3.5v-4"/><path d="M9 14l-1 5M15 14l1 5"/></svg></span><h3>Tabla</h3><p>Bols, taals and rhythm foundations that build timing across every kind of music.</p><span class="about-inst-meta">Bols &middot; Taals &middot; Accompaniment</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section about-faq-sec">
+  <div class="wrap about-faq-grid">
+    <div class="about-faq-intro">
+      <span class="eyebrow">Good to know</span>
+      <h2>Questions families often ask</h2>
+      <p>Can&rsquo;t find your answer? Our team is happy to talk it through.</p>
+      <a href="../contact/contact.html" class="btn btn-outline">Talk to us</a>
+    </div>
+    <div class="about-faq">
+      <details class="about-faq-item" open><summary>What age can a child start?</summary><p>Many children begin piano or tabla around age 5, and guitar or violin from about 7. Your teacher will advise during the trial lesson.</p></details>
+      <details class="about-faq-item"><summary>Do we need to own an instrument first?</summary><p>No. We recommend waiting until after the trial. Your teacher will suggest a suitable instrument and size for your budget.</p></details>
+      <details class="about-faq-item"><summary>How long is each lesson?</summary><p>Lessons are usually 45 to 60 minutes, once or twice a week, at a time that fits your family&rsquo;s routine.</p></details>
+      <details class="about-faq-item"><summary>Can we change the teacher if it isn&rsquo;t a good fit?</summary><p>Yes. If the match doesn&rsquo;t feel right, tell us and we will arrange another teacher at no extra cost.</p></details>
+      <details class="about-faq-item"><summary>Do you prepare students for exams?</summary><p>Yes. Teachers can prepare learners for graded music exams, school performances and competitions.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="about-cta">
+      <div class="about-cta-copy">
+        <span class="eyebrow">Come and say hello</span>
+        <h2>Start learning an instrument at home</h2>
+        <p>Meet a teacher, try an instrument and experience a one-to-one lesson in the comfort of your home. Start with a free trial and choose the instrument that feels right.</p>
+        <div class="about-ctas">
+          <a href="../contact/contact.html" class="btn btn-primary">Book a free trial</a>
+          <a href="../pricing/pricing.html" class="btn btn-outline">See pricing</a>
+        </div>
+      </div>
+      <div class="about-cta-photo"><div class="about-cta-frame"><img src="https://images.unsplash.com/photo-1593697972672-b1c1902219e4?auto=format&fit=crop&w=1000&q=85" alt="A woman playing an acoustic guitar at home" loading="lazy"></div></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="../home/index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 120 110" fill="none">
+            <path d="M10 82c20 10 38 4 50-6" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M24 62c7-11 4-22-6-30" stroke="var(--logo-gold)" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <path d="M15 46c7-2 12-9 9-16-7 2-12 9-9 16z" fill="var(--logo-gold)"/>
+            <path d="M24 60c7-1 12-7 11-14-7 1-12 7-11 14z" fill="var(--logo-gold)"/>
+            <path d="M22 54 L52 20 L88 54" stroke="var(--logo-ink)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M88 10 V70" stroke="var(--logo-ink)" stroke-width="7" stroke-linecap="round"/>
+            <path d="M88 10c16 7 22 19 15 32-4-11-11-18-15-20z" fill="var(--logo-ink)"/>
+            <ellipse cx="80" cy="76" rx="13" ry="10" fill="var(--logo-ink)" transform="rotate(-20 80 76)"/>
+            <rect x="38" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+            <rect x="50" y="44" width="8" height="8" fill="var(--logo-ink)"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="logo-word">Raga<em>House</em></span><br>
+          <span class="brand-sub">Home Music Tuitions</span>
+        </span>
+      </a>
+      <p class="footer-desc" style="margin-top:18px;">One-to-one home tuition for guitar, piano, violin and tabla, taught by vetted teachers on a schedule built around your family.</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="4"/><path d="M10.5 9.5l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 5l14 14M19 5L5 19" stroke-linecap="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <ul>
+        <li><a href="../home/index.html">Home</a></li>
+        <li><a href="../home2/home-2.html">Home 2</a></li>
+        <li><a href="../about/about.html">About Us</a></li>
+        <li><a href="../instruments/instruments.html">Instruments</a></li>
+        <li><a href="../how-it-works/how-it-works.html">How It Works</a></li>
+        <li><a href="../pricing/pricing.html">Pricing</a></li>
+        <li><a href="../contact/contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Instruments</h4>
+      <ul>
+        <li><a href="../instruments/instrument-detail.html#guitar">Guitar</a></li>
+        <li><a href="../instruments/instrument-detail.html#piano">Piano</a></li>
+        <li><a href="../instruments/instrument-detail.html#violin">Violin</a></li>
+        <li><a href="../instruments/instrument-detail.html#tabla">Tabla</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Additional Pages</h4>
+      <ul>
+        <li><a href="../additional/404.html">404 Page</a></li>
+        <li><a href="../additional/coming-soon.html">Coming Soon</a></li>
+        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg>
+          +91 90000 00000
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          hello@ragahouse.in
+        </li>
+        <li class="contact-line">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
+          Hyderabad, Telangana
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap footer-bottom">
+    <span>© 2026 Raga House. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="../legal/terms.html">Terms</a>
+      <a href="../legal/privacy.html">Privacy</a>
+    </div>
+  </div>
+</footer>
+<script src="../home/script.js"></script>
+<!-- Photos via Unsplash: Andrey K, BandLab, Aarón Blanco Tejedor, Clark Young, Soundtrap -->
+</body>
+</html>
